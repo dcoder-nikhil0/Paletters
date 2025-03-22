@@ -6,6 +6,7 @@ import WhyChooseUs from '../Components/WhyChooseUs'
 import WebServices from '../Components/Website/WebService'
 import WebOffers from '../Components/Website/WebOffers'
 import WebBenefits from '../Components/Website/WebBenefits'
+import Form from '../Components/Contact/Form'
 
 const Website = () => {
   return (
@@ -16,6 +17,7 @@ const Website = () => {
       <WhyChooseUs />
       <WebBenefits />
       <WebCTA />
+      <Form />
     </Box>
   )
 }
