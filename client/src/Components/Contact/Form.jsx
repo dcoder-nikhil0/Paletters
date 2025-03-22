@@ -8,7 +8,7 @@ const Form = () => {
       <section
         className="min-h-screen bg-cover "
         style={{
-          backgroundImage : {bg},
+          backgroundImage : 'url(' + bg + ')',
         }}
       >
         <div className="flex flex-col min-h-screen bg-black/60">
