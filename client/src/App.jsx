@@ -1,9 +1,23 @@
+import { Box } from "@mui/material";
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
-
   return (
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <Box>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </Box>
   );
 }
 
