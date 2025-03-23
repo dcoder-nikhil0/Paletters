@@ -6,6 +6,7 @@ import IllBenefits from '../Components/Illustration/IllBenefits'
 import IllCTA from '../Components/Illustration/IllCTA'
 import IllServices from '../Components/Illustration/IllServices'
 import Form from "../Components/Contact/Form"
+import WhyChooseUs from './../Components/WhyChooseUs';
 
 const Illustration = () => {
   return (
@@ -14,6 +15,7 @@ const Illustration = () => {
       <IllOffers />
       <IllServices />
       <IllBenefits />
+      <WhyChooseUs />
       <IllCTA/>
       <Form />
     </Box>
