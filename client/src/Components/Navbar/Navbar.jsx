@@ -1,162 +1,150 @@
-import React from "react";
-import {
-  Typography,
-  Stack,
-  Box,
-  Button,
-  ButtonGroup,
-  IconButton,
-  Drawer,
-  useMediaQuery,
-  List,
-  ListItem,
-} from "@mui/material";
-import { Link } from "react-router-dom";
-import { AiOutlineMenuUnfold } from "react-icons/ai";
-import { IoHome } from "react-icons/io5"; // Home Icon
-import { RiCustomerService2Fill } from "react-icons/ri"; // Contact Icon
-import { MdHomeRepairService } from "react-icons/md"; // Service Icon
-import { LuPackageOpen } from "react-icons/lu"; // Catalogue Icon
-import { HiMiniInformationCircle } from "react-icons/hi2"; // About Icon
-import logo from "../../assets/logo.webp";
+import { useState } from "react";
+import { FaAngleDown } from "react-icons/fa";
+import { Button } from "@mui/material";
 
 const Navbar = () => {
-  const isSmallScreen = useMediaQuery("(max-width:768px)");
-  const [drawerOpen, setDrawerOpen] = React.useState(false);
-
-  const handleDrawerOpen = () => {
-    setDrawerOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setDrawerOpen(false);
-  };
-
-  const handleDrawerItemClick = () => {
-    handleDrawerClose();
-  };
-
-  // Updated function to include an optional icon for each link
-  const renderLinkButton = (path, label, Icon = null) => (
-    <Link to={path} style={{ textDecoration: "none" }}>
-      <Button
-        sx={{
-          paddingRight: "20px",
-          color: "#1565C0",
-          fontWeight: "bold",
-          fontSize: "1rem",
-          display: "flex",
-          alignItems: "center",
-          "&:hover": {
-            backgroundColor: "#0A5C83",
-            color: "white",
-          },
-        }}
-        variant="none"
-      >
-        {Icon && <Icon style={{ marginRight: "8px" }} />}{" "}
-        {/* Render icon if passed */}
-        {label}
-      </Button>
-    </Link>
-  );
-
-  const renderDrawerItem = (path, label, Icon = null) => (
-    <Link to={path} style={{ textDecoration: "none" }}>
-      <ListItem button onClick={handleDrawerItemClick}>
-        <Typography variant="overline" color="white" sx={{ margin: "0 20px" }}>
-          {Icon && <Icon style={{ marginRight: "8px" }} />} {/* Drawer icon */}
-          {label}
-        </Typography>
-      </ListItem>
-    </Link>
-  );
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
-      <Stack
-        backgroundColor="#FFFFFF"
-        boxShadow={3}
-        direction={"row"}
-        alignItems={"center"}
-        padding={"0px 24px"}
-        justifyContent={"space-between"}
-        sx={{
-          color: "white",
-          position: "relative",
-          width: "100%",
-          zIndex: "1000",
-        }}
-      >
-        <Box className="flex items-center">
-          {/* Logo Image */}
-          <Link to="/" className="flex items-center">
-            <img
-              src={logo} // Replace with the path to your logo
-              alt="Paletterse"
-              className="h-20 mr-2 py-2"
-            />
-            <Typography variant="h5" className="text-[#1f396b] font-bold">
-              Paletterse
-            </Typography>
-          </Link>
-        </Box>
+    <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
+      {/* Logo Section */}
+      <div className="flex items-center space-x-3">
+        <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
+        <span className="text-xl font-bold text-gray-800">VisualBest</span>
+        <span className="bg-yellow-400 text-black text-xs font-medium px-2 py-1 rounded-full ml-2">
+          We're hiring!
+        </span>
+      </div>
 
-        {!isSmallScreen && (
-          <Box>
-            <ButtonGroup>
-              {renderLinkButton("/", "Home", IoHome)} {/* Home Icon */}
-              {renderLinkButton(
-                "/services",
-                "Services",
-                MdHomeRepairService
-              )}{" "}
-              {/* Service Icon */}
-              {renderLinkButton("/catalogue", "Catalogue", LuPackageOpen)}{" "}
-              {/* Catalogue Icon */}
-              {renderLinkButton(
-                "/about",
-                "About",
-                HiMiniInformationCircle
-              )}{" "}
-              {/* About Icon */}
-              {renderLinkButton(
-                "/contact",
-                "Contact",
-                RiCustomerService2Fill
-              )}{" "}
-              {/* Contact Icon */}
-            </ButtonGroup>
-          </Box>
-        )}
+      {/* Navigation Links */}
+      <div className="hidden md:flex space-x-8 text-gray-800">
+        <div className="group relative">
+          <button className="flex items-center hover:text-yellow-500">
+            Design <FaAngleDown className="ml-1" />
+          </button>
+          <div className="hidden group-hover:block absolute bg-white shadow-lg p-2 mt-2">
+            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+              Logo Design
+            </a>
+            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+              Branding
+            </a>
+          </div>
+        </div>
+        <a href="#" className="hover:text-yellow-500">
+          Illustration
+        </a>
+        <a href="#" className="hover:text-yellow-500">
+          Website
+        </a>
 
-        {isSmallScreen && (
-          <Box>
-            <IconButton
-              sx={{
-                color: "black",
-                "&:hover": { backgroundColor: "#0A5D89", color: "blue" },
-              }}
-              aria-label="open drawer"
-              edge="end"
-              onClick={handleDrawerOpen}
-            >
-              <AiOutlineMenuUnfold style={{ fontSize: "2rem" }} />
-            </IconButton>
-            <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerClose}>
-              <List sx={{ backgroundColor: "#0A5D89", height: "100vh" }}>
-                {renderDrawerItem("/", "Home")} {/* Home Icon */}
-                {renderDrawerItem("/services", "Services")} {/* Service Icon */}
-                {renderDrawerItem("/catalogue", "Catalogue")}{" "}
-                {/* Catalogue Icon */}
-                {renderDrawerItem("/about", "About")} {/* About Icon */}
-                {renderDrawerItem("/contact", "Contact")} {/* Contact Icon */}
-              </List>
-            </Drawer>
-          </Box>
-        )}
-      </Stack>
-    </div>
+        <div className="group relative">
+          <button className="flex items-center hover:text-yellow-500">
+            Video <FaAngleDown className="ml-1" />
+          </button>
+          <div className="hidden group-hover:block absolute bg-white shadow-lg p-2 mt-2">
+            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+              Motion Graphics
+            </a>
+            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+              Animation
+            </a>
+          </div>
+        </div>
+
+        <a href="#" className="hover:text-yellow-500">
+          Content
+        </a>
+        <a href="#" className="hover:text-yellow-500">
+          Marketing
+        </a>
+
+        <div className="group relative">
+          <button className="flex items-center hover:text-yellow-500">
+            Resources <FaAngleDown className="ml-1" />
+          </button>
+          <div className="hidden group-hover:block absolute bg-white shadow-lg p-2 mt-2">
+            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+              Blog
+            </a>
+            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+              Case Studies
+            </a>
+          </div>
+        </div>
+
+        <div className="group relative">
+          <button className="flex items-center hover:text-yellow-500">
+            About Us <FaAngleDown className="ml-1" />
+          </button>
+          <div className="hidden group-hover:block absolute bg-white shadow-lg p-2 mt-2">
+            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+              Our Team
+            </a>
+            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+              Careers
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Us Button */}
+      <div className="hidden md:block">
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "#FCD34D",
+            color: "#000",
+            "&:hover": { backgroundColor: "#FBBF24" },
+          }}
+        >
+          Contact Us
+        </Button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className="md:hidden">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-gray-800 focus:outline-none"
+        >
+          ☰
+        </button>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isOpen && (
+        <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-md">
+          <a href="#" className="block px-4 py-2 text-gray-800">
+            Design
+          </a>
+          <a href="#" className="block px-4 py-2 text-gray-800">
+            Illustration
+          </a>
+          <a href="#" className="block px-4 py-2 text-gray-800">
+            Website
+          </a>
+          <a href="#" className="block px-4 py-2 text-gray-800">
+            Video
+          </a>
+          <a href="#" className="block px-4 py-2 text-gray-800">
+            Content
+          </a>
+          <a href="#" className="block px-4 py-2 text-gray-800">
+            Marketing
+          </a>
+          <a href="#" className="block px-4 py-2 text-gray-800">
+            Resources
+          </a>
+          <a href="#" className="block px-4 py-2 text-gray-800">
+            About Us
+          </a>
+          <a href="#" className="block px-4 py-2 text-gray-800">
+            Contact Us
+          </a>
+        </div>
+      )}
+    </nav>
   );
 };
 
