@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact";
 import Website from "./Pages/Website";
 import Content from "./Pages/Content";
 import Illustration from "./Pages/Illustration";
+import Video from "./Pages/Video";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/illustration" element={<Illustration />} />
           <Route path="/website" element={<Website />} />
+          <Route path="/video" element={<Video />} />
           <Route path="/content" element={<Content />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound/>} />
