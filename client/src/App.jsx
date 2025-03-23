@@ -9,6 +9,7 @@ import NotFound from "./Pages/NotFound";
 import Contact from "./Pages/Contact";
 import Website from "./Pages/Website";
 import Content from "./Pages/Content";
+import Illustration from "./Pages/Illustration";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/illustration" element={<Illustration />} />
           <Route path="/website" element={<Website />} />
           <Route path="/content" element={<Content />} />
           <Route path="/contact" element={<Contact />} />
