@@ -1,147 +1,131 @@
 import { useState } from "react";
-import { FaAngleDown } from "react-icons/fa";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
+    <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center relative">
       {/* Logo Section */}
       <div className="flex items-center space-x-3">
-        <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
-        <span className="text-xl font-bold text-gray-800">VisualBest</span>
-        <span className="bg-yellow-400 text-black text-xs font-medium px-2 py-1 rounded-full ml-2">
-          We're hiring!
-        </span>
+        <Link to="/">
+          <span className="text-xl font-bold text-gray-800">Paletterse</span>
+        </Link>
       </div>
 
       {/* Navigation Links */}
       <div className="hidden md:flex space-x-8 text-gray-800">
-        <div className="group relative">
-          <button className="flex items-center hover:text-yellow-500">
-            Design <FaAngleDown className="ml-1" />
-          </button>
-          <div className="hidden group-hover:block absolute bg-white shadow-lg p-2 mt-2">
-            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-              Logo Design
-            </a>
-            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-              Branding
-            </a>
-          </div>
-        </div>
-        <a href="#" className="hover:text-yellow-500">
+        <Link to="/" className="hover:text-yellow-500">
+          Design
+        </Link>
+        <Link to="/illustration" className="hover:text-yellow-500">
           Illustration
-        </a>
-        <a href="#" className="hover:text-yellow-500">
+        </Link>
+        <Link to="/website" className="hover:text-yellow-500">
           Website
-        </a>
-
-        <div className="group relative">
-          <button className="flex items-center hover:text-yellow-500">
-            Video <FaAngleDown className="ml-1" />
-          </button>
-          <div className="hidden group-hover:block absolute bg-white shadow-lg p-2 mt-2">
-            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-              Motion Graphics
-            </a>
-            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-              Animation
-            </a>
-          </div>
-        </div>
-
-        <a href="#" className="hover:text-yellow-500">
+        </Link>
+        <Link to="/video" className="hover:text-yellow-500">
+          Video
+        </Link>
+        <Link to="/content" className="hover:text-yellow-500">
           Content
-        </a>
-        <a href="#" className="hover:text-yellow-500">
-          Marketing
-        </a>
-
-        <div className="group relative">
-          <button className="flex items-center hover:text-yellow-500">
-            Resources <FaAngleDown className="ml-1" />
-          </button>
-          <div className="hidden group-hover:block absolute bg-white shadow-lg p-2 mt-2">
-            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-              Blog
-            </a>
-            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-              Case Studies
-            </a>
-          </div>
-        </div>
-
-        <div className="group relative">
-          <button className="flex items-center hover:text-yellow-500">
-            About Us <FaAngleDown className="ml-1" />
-          </button>
-          <div className="hidden group-hover:block absolute bg-white shadow-lg p-2 mt-2">
-            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-              Our Team
-            </a>
-            <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-              Careers
-            </a>
-          </div>
-        </div>
+        </Link>
+        <Link to="/about" className="hover:text-yellow-500">
+          About Us
+        </Link>
       </div>
 
-      {/* Contact Us Button */}
-      <div className="hidden md:block">
-        <Button
-          variant="contained"
-          sx={{
-            backgroundColor: "#FCD34D",
-            color: "#000",
-            "&:hover": { backgroundColor: "#FBBF24" },
-          }}
-        >
-          Contact Us
-        </Button>
+      {/* Buttons Section */}
+      <div className="hidden md:flex space-x-4">
+        <Link to="/contact">
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "#FCD34D",
+              color: "#000",
+              "&:hover": { backgroundColor: "#FBBF24" },
+            }}
+          >
+            Contact Us
+          </Button>
+        </Link>
+
+        <Link to="/portfolio">
+          <Button
+            variant="outlined"
+            sx={{
+              color: "#000",
+              borderColor: "#FCD34D",
+              "&:hover": { borderColor: "#FBBF24", color: "#FBBF24" },
+            }}
+          >
+            See Portfolio
+          </Button>
+        </Link>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Toggle */}
       <div className="md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-gray-800 focus:outline-none"
+          className="text-gray-800 focus:outline-none text-2xl"
         >
-          ☰
+          {isOpen ? "✕" : "☰"}
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-md">
-          <a href="#" className="block px-4 py-2 text-gray-800">
+        <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-md z-50">
+          <Link
+            to="/"
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+          >
             Design
-          </a>
-          <a href="#" className="block px-4 py-2 text-gray-800">
+          </Link>
+          <Link
+            to="/illustration"
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+          >
             Illustration
-          </a>
-          <a href="#" className="block px-4 py-2 text-gray-800">
+          </Link>
+          <Link
+            to="/website"
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+          >
             Website
-          </a>
-          <a href="#" className="block px-4 py-2 text-gray-800">
+          </Link>
+          <Link
+            to="/video"
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+          >
             Video
-          </a>
-          <a href="#" className="block px-4 py-2 text-gray-800">
+          </Link>
+          <Link
+            to="/content"
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+          >
             Content
-          </a>
-          <a href="#" className="block px-4 py-2 text-gray-800">
-            Marketing
-          </a>
-          <a href="#" className="block px-4 py-2 text-gray-800">
-            Resources
-          </a>
-          <a href="#" className="block px-4 py-2 text-gray-800">
+          </Link>
+          <Link
+            to="/about"
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+          >
             About Us
-          </a>
-          <a href="#" className="block px-4 py-2 text-gray-800">
+          </Link>
+          <Link
+            to="/contact"
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+          >
             Contact Us
-          </a>
+          </Link>
+          <Link
+            to="/portfolio"
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+          >
+            See Portfolio
+          </Link>
         </div>
       )}
     </nav>

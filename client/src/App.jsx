@@ -11,6 +11,7 @@ import Website from "./Pages/Website";
 import Content from "./Pages/Content";
 import Illustration from "./Pages/Illustration";
 import Video from "./Pages/Video";
+import Portfolio from "./Pages/Portfolio";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/video" element={<Video />} />
           <Route path="/content" element={<Content />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
         <Footer />
