@@ -2,13 +2,18 @@ import { Box } from '@mui/material'
 import React from 'react'
 import AboutHero from '../Components/About/AboutHero'
 import AboutValue from '../Components/About/AboutValue'
+import AboutMission from '../Components/About/AboutMission'
+import Form from '../Components/Contact/Form'
+import AboutFounders from '../Components/About/AboutFounders'
 
 const About = () => {
   return (
     <Box>
       <AboutHero />
       <AboutValue />
-      {/* <AboutMission /> */}
+      <AboutMission />
+      <AboutFounders />
+      <Form />
     </Box>
   )
 }
