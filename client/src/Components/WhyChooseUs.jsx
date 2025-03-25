@@ -1,6 +1,7 @@
 import { FaStar, FaGlobe, FaRegCommentDots } from "react-icons/fa";
 import { MdWeb } from "react-icons/md";
 import { Button } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 const WhyChooseUs = () => {
   return (
@@ -61,14 +62,14 @@ const WhyChooseUs = () => {
         </div>
 
         <div className="mt-12">
-          <Button
+          <Link
+          to="/contact"
             variant="contained"
-            color="primary"
             size="large"
-            className="rounded-full px-8 py-3"
+            className="rounded-full px-8 py-3 font-bold text-black bg-amber-400 hover:bg-amber-500"
           >
             Hire Us
-          </Button>
+          </Link>
         </div>
       </div>
     </div>

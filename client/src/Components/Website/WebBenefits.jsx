@@ -29,9 +29,9 @@ const WebBenefits = () => {
     <section className="py-16 bg-white text-center">
       <h2 className="text-4xl font-bold">Benefits of Web Design and Development</h2>
       <p className="text-lg text-gray-600 mt-4">In addition to enhancing the user experience, a good website serves multiple purposes:</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-16 gap-8 mt-12 max-w-8xl mx-auto">
         {benefits.map((item, index) => (
-          <div key={index} className="p-6 border rounded-lg shadow-md hover:shadow-lg transition">
+          <div key={index} className="py-16 p-2 border rounded-lg shadow-md hover:shadow-lg transition">
             <div className="flex justify-center mb-4">{item.icon}</div>
             <h3 className="text-xl font-semibold">{item.title}</h3>
             <p className="text-gray-600 mt-2">{item.description}</p>
