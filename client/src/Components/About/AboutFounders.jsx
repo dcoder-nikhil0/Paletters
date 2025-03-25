@@ -6,34 +6,34 @@ import founder1 from "../../assets/me.png";
 const founders = [
   {
     img: founder1,
-    name: "Santosh Kushwaha",
+    name: "Aditya Raj",
     title: "Founder and Managing Director",
-    description: `Santosh Kushwaha, a visionary leader, excels at visually telling brand stories 
+    description: `Aditya Raj, a visionary leader, excels at visually telling brand stories 
       that boost clients' businesses. With 20+ years in design, he's earned a reputation as 
       a visual storytelling wizard, having worked with leading Indian brands.`,
   },
   {
     img: founder1,
-    name: "Amit Sharma",
-    title: "Co-Founder and CTO",
-    description: `Amit Sharma drives the technical vision at VisualBest. With expertise in 
-      software architecture and development, he ensures the company's tech solutions 
-      remain innovative and scalable.`,
+    name: "Romshi Narayan Singh",
+    title: "Co-Founder and Creative Director",
+    description: `Romshi Narayan Singh, leads the creative team with a passion for design innovation. 
+      Her artistic vision and strategic approach have helped Paletterse stand out 
+      in the competitive market.`,
   },
   {
     img: founder1,
-    name: "Priya Mehta",
-    title: "Co-Founder and Creative Director",
-    description: `Priya Mehta leads the creative team with a passion for design innovation. 
-      Her artistic vision and strategic approach have helped VisualBest stand out 
-      in the competitive market.`,
+    name: "Nikhil Ranjan",
+    title: "Co-Founder and CTO",
+    description: `Nikhil Ranjan is a tech wizard who ensures that Paletterse's digital
+      solutions are cutting-edge. With 15+ years of experience in web development, 
+      he's the backbone of the company.`,
   },
 ];
 
 const AboutFounders = () => {
   return (
     <div className="bg-gray-50 py-16 px-6 md:px-12 lg:px-20">
-      <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+      <h2 className="text-7xl font-bold text-center text-gray-900 mb-12">
         Our Leadership
       </h2>
 

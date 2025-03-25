@@ -46,16 +46,6 @@ const AboutValue = () => {
     setCurrentIndex(index);
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % growthData.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + growthData.length) % growthData.length
-    );
-  };
-
   return (
     <Box sx={{ padding: "4rem", backgroundColor: "#fff", textAlign: "center" }}>
       {/* GROWTH Letters */}
@@ -71,6 +61,7 @@ const AboutValue = () => {
               backgroundColor: index === currentIndex ? "#FFC107" : "#FFF3CD",
               borderRadius: "8px",
               padding: "2rem",
+              margin: "8px",
               boxShadow:
                 index === currentIndex ? "0 6px 12px rgba(0,0,0,0.1)" : "none",
               "&:hover": { backgroundColor: "#FFD54F" },
@@ -104,23 +95,12 @@ const AboutValue = () => {
 
         <Typography
           variant="body1"
-          sx={{ maxWidth: "600px", margin: "0 auto" }}
+          sx={{ maxWidth: "600px", margin: "0 auto", color: "#666" }}
         >
           {growthData[currentIndex].description}
         </Typography>
 
-        {/* Navigation Buttons */}
-        <Box
-          sx={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}
-        >
-          <IconButton onClick={handlePrev}>
-            <ArrowBack />
-          </IconButton>
-
-          <IconButton onClick={handleNext}>
-            <ArrowForward />
-          </IconButton>
-        </Box>
+        
 
         {/* Pagination Dots */}
         <Box
