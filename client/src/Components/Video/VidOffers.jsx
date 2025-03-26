@@ -1,18 +1,18 @@
-import React from "react";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const VidOffers = () => {
+const WebOffers = () => {
   const services = [
-    "Website Design",
+    "Product Explainer Video",
     "Interactive Design",
-    "Microsite Design",
-    "Prototype Design",
-    "Wireframe Design",
-    "E-commerce Design",
-    "User Interface Design",
-    "Website Design Consultation",
-    "Blog Page Design",
+    "Live Action Explainer Videos",
+    "Video Invitation Services",
+    "YouTube Video Marketing",
+    "Corporate Video Production",
+    "Video Editing Services",
+    "Video Testimonials",
+    "Video Production Consultation",
   ];
 
   return (
@@ -20,39 +20,49 @@ const VidOffers = () => {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-4xl font-bold mb-6">
-            Website Development Company <br /> in India
+            Corporate Video Production Company
           </h1>
           <p className="text-gray-600 leading-relaxed mb-8">
-            Your website is arguably your most important digital marketing
-            asset; if it isn't growing your business, it's time to take action
-            for it. With our high-quality website development service, we build
-            websites continuously optimized for the highest search engine
-            placement, hit directly to your market, and convert visitors into
-            paying customers. We implement such innovative ideas focusing on
-            outstanding, high-performing website design. We use advanced
-            technologies and coding languages to develop high-performing
-            websites such as{" "}
-            <span className="font-bold">
-              WordPress, PHP, Drupal, Laravel, NodeJs, ReactJs, Shopify
-            </span>{" "}
-            and WooCommerce for website development.
+            Paletterse is the leading corporate video production company in
+            Noida, India, and we are a team of skilled crews, professional
+            equipment, and meticulous planning. High-quality cameras, lighting,
+            and audio gear ensure crisp visuals and clear sound. Our team of
+            directors, cinematographers, and sound engineers contributes
+            expertise to every aspect of production. Detailed story boarding
+            captures nuances, enhancing the final narrative. Professional
+            editing refines footage, incorporating colour correction and
+            graphics for a polished outcome. This approach represents the brand
+            professionally and ensures consistency across platforms. Ultimately,
+            a corporate video shoot is a comprehensive process that results in
+            engaging, premium-quality videos, conveying messages effectively to
+            diverse audiences.
           </p>
         </div>
 
-        <div>
-          <h2 className="text-xl font-semibold mb-4">We offer services for:</h2>
-          <ul className="space-y-4">
-            {services.map((service, index) => (
-              <li key={index} className="flex items-center text-gray-700">
-                <CheckCircle className="text-yellow-500 mr-3" />
-                {service}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-8">
-            <Button className="bg-yellow-400 text-black px-6 py-3 rounded-full hover:bg-yellow-500">
-              Explore Portfolio
-            </Button>
+        <div className="flex justify-end">
+          <div className="text-right">
+            <h2 className="text-xl font-semibold flex justify-start mb-4">
+              We offer services for:
+            </h2>
+            <ul className="space-y-4">
+              {services.map((service, index) => (
+                <li
+                  key={index}
+                  className="flex items-center justify-start text-gray-700"
+                >
+                  <CheckCircle className="text-yellow-500 mr-2" />
+                  <span className="mr-3">{service}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex justify-start mt-8">
+              <Link
+                to="/portfolio"
+                className="bg-yellow-400 font-bold text-black px-6 py-3 rounded-full hover:bg-yellow-500"
+              >
+                Explore Portfolio
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -60,4 +70,4 @@ const VidOffers = () => {
   );
 };
 
-export default VidOffers;
+export default WebOffers;
