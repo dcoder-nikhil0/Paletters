@@ -1,11 +1,11 @@
 import React from "react";
 import founder1 from "../../assets/me.png";
-// import founder2 from "../../assets/founder2.png";
-// import founder3 from "../../assets/founder3.png";
+import founder2 from "../../assets/aditya.jpg";
+import founder3 from "../../assets/romshi.jpg";
 
 const founders = [
   {
-    img: founder1,
+    img: founder2,
     name: "Aditya Raj",
     title: "Founder and Managing Director",
     description: `Aditya Raj, a visionary leader, excels at visually telling brand stories 
@@ -13,7 +13,7 @@ const founders = [
       a visual storytelling wizard, having worked with leading Indian brands.`,
   },
   {
-    img: founder1,
+    img: founder3,
     name: "Romshi Narayan Singh",
     title: "Co-Founder and Creative Director",
     description: `Romshi Narayan Singh, leads the creative team with a passion for design innovation. 
