@@ -52,12 +52,14 @@ const WebOffers = () => {
                 >
                   <CheckCircle className="text-yellow-500 mr-2" />
                   <span className="mr-3">{service}</span>
-                  
                 </li>
               ))}
             </ul>
             <div className="flex justify-start mt-8">
-              <Link to="/portfolio" className="bg-yellow-400 font-bold text-black px-6 py-3 rounded-full hover:bg-yellow-500">
+              <Link
+                to="/portfolio"
+                className="bg-yellow-400 font-bold text-black px-6 py-3 rounded-full hover:bg-yellow-500"
+              >
                 Explore Portfolio
               </Link>
             </div>
