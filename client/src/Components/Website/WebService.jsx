@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import design from "../../assets/design.webp"
 import dev from "../../assets/dev.webp"
 import interactive from "../../assets/interactive.webp"
-import host from "../../assets/hosting.webp"
+// import host from "../../assets/hosting.webp"
 import service from "../../assets/service.webp"
+import { Link } from 'react-router-dom';
 
 const services = {
   Design: {
     title: 'Website Design Service',
-    description: `At Visual Best, our web design services cover a wide range, including sleek Website and Interactive Designs, focused Microsites, dynamic E-commerce Designs, detailed Prototypes, wireframes, and User Interface Designs. We also provide expert Website Design Consultation and create engaging Blog Page Designs to enhance your digital footprint. We will create and optimize your landing page so that you generate excellent leads and depict your brand message to your target audience.`,
+    description: `At Paletterse, our web design services cover a wide range, including sleek Website and Interactive Designs, focused Microsites, dynamic E-commerce Designs, detailed Prototypes, wireframes, and User Interface Designs. We also provide expert Website Design Consultation and create engaging Blog Page Designs to enhance your digital footprint. We will create and optimize your landing page so that you generate excellent leads and depict your brand message to your target audience.`,
     features: ['Custom Design', 'Dynamic Prototype', 'Landing Page Design', 'Ceros Experience Design'],
     image: design // Replace with your image path
   },
@@ -30,12 +31,12 @@ const services = {
     features: ['24/7 Availability', 'Technical Assistance', 'Regular Updates'],
     image: service // Replace with your image path
   },
-  Hosting: {
-    title: 'Reliable Hosting Solutions',
-    description: `We provide secure and high-speed hosting services with guaranteed uptime and regular backups.`,
-    features: ['High-speed Servers', 'Regular Backups', '99.9% Uptime'],
-    image: host // Replace with your image path
-  }
+  // Hosting: {
+  //   title: 'Reliable Hosting Solutions',
+  //   description: `We provide secure and high-speed hosting services with guaranteed uptime and regular backups.`,
+  //   features: ['High-speed Servers', 'Regular Backups', '99.9% Uptime'],
+  //   image: host // Replace with your image path
+  // }
 };
 
 export default function WebServices() {
@@ -72,9 +73,9 @@ export default function WebServices() {
               ))}
             </ul>
             <div className="mt-6">
-              <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition">
+              <Link to="/contact" className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition">
                 Get High Performing Website →
-              </button>
+              </Link >
             </div>
           </div>
 

@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 const WebCTA = () => {
   return (
     <Box>
-      <section className="bg-white dark:bg-gray-900">
+      <section className="bg-white">
         <div className="container grid grid-cols-1 gap-8 px-4 py-12 mx-auto lg:grid-cols-2">
           <div className="flex flex-col items-center max-w-lg mx-auto text-center">
-            <h2 className="text-3xl font-semibold tracking-tight text-gray-800 dark:text-white">
+            <h2 className="text-3xl font-semibold tracking-tight text-gray-800 ">
               Website Designing
             </h2>
 
-            <p className="mt-3 text-gray-500 dark:text-gray-300">
+            <p className="mt-3 text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ex
               cupiditate corrupti aliquam eum vel consequuntur hic culpa unde
               natus officia enim est impedit consequatur aut, voluptatem minima
@@ -28,23 +28,23 @@ const WebCTA = () => {
           </div>
 
           <div className="flex flex-col items-center max-w-lg mx-auto text-center">
-            <h2 className="text-3xl font-semibold tracking-tight text-gray-800 dark:text-white">
+            <h2 className="text-3xl font-semibold tracking-tight text-gray-800 ">
               Website development
             </h2>
 
-            <p className="mt-3 text-gray-500 dark:text-gray-300">
+            <p className="mt-3 text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ex
               cupiditate corrupti aliquam eum vel consequuntur hic culpa unde
               natus officia enim est impedit consequatur aut, voluptatem minima
               repellat non!
             </p>
 
-            <a
-              href="#"
-              className="my-6 py-3 border border-amber-400 hover:bg-yellow-500 hover:text-white text-amber-400 font-bold px-6 rounded-full shadow-lg transition"
+            <Link
+              to="/contact"
+              className="my-6 py-3 border text-black border-amber-400 hover:bg-yellow-500 hover:texxt-black font-bold px-6 rounded-full shadow-lg transition"
             >
               Start now
-            </a>
+            </Link>
           </div>
         </div>
       </section>
