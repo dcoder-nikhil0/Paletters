@@ -3,12 +3,12 @@ import CountUp from "react-countup";
 
 const HomeCountups = () => {
   const counters = [
-    { value: 5500, suffix: "+", label: "Projects Completed" },
-    { value: 250, suffix: "+", label: "Global Clients" },
-    { value: 8, suffix: " years", label: "Years" },
-    { value: 45, suffix: "+", label: "Team Size" },
-    { value: 95, suffix: "%", label: "Client Retention" },
-    { value: 5, suffix: "star", label: "Reviews" },
+    { value: 2500, suffix: "+", label: "Projects Completed" },
+    { value: 150, suffix: "+", label: "Global Clients" },
+    { value: 3, suffix: " years", label: "Years" },
+    { value: 30, suffix: "+", label: "Team Size" },
+    { value: 85, suffix: "%", label: "Client Retention" },
+    { value: 5, suffix: "⭐", label: "Reviews" },
   ];
 
   return (
