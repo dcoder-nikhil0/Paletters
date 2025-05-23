@@ -12,7 +12,7 @@ const AboutMission = () => {
             Our Mission
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            At <span className="font-semibold text-blue-600">Visual Best</span>, our mission is to deliver top-tier graphic
+            At <span className="font-semibold text-amber-400">Paletterse</span>, our mission is to deliver top-tier graphic
             design and digital marketing services that combine premium quality
             with affordability, serving both local and global clients.
           </p>

@@ -7,17 +7,19 @@ import IllCTA from '../Components/Illustration/IllCTA'
 import IllServices from '../Components/Illustration/IllServices'
 import Form from "../Components/Contact/Form"
 import WhyChooseUs from './../Components/WhyChooseUs';
+import IllFAQ from '../Components/Illustration/IllFAQ'
 
 const Illustration = () => {
   return (
     <Box>
       <IllHero />
       <IllOffers />
-      <IllServices />
+      {/* <IllServices /> */}
       <IllBenefits />
       <WhyChooseUs />
       <IllCTA/>
       <Form />
+      <IllFAQ />
     </Box>
   )
 }

@@ -6,6 +6,7 @@ import VidBenefits from '../Components/Video/VidBenefits'
 import VidService from '../Components/Video/VidService'
 import WhyChooseUs from '../Components/WhyChooseUs'
 import Form from '../Components/Contact/Form'
+import VidFAQ from '../Components/Video/VidFAQ'
 
 const Video = () => {
   return (
@@ -16,6 +17,7 @@ const Video = () => {
       <VidService />
       <WhyChooseUs />
       <Form />
+      <VidFAQ />
     </Box>
   )
 }
