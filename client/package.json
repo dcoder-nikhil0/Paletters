@@ -16,6 +16,7 @@
     "@mui/material": "^6.4.8",
     "@tailwindcss/postcss": "^4.0.15",
     "client": "file:",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.5.0",
     "lucide-react": "^0.483.0",
     "postcss": "^8.5.3",
