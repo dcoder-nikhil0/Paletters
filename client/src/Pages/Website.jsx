@@ -7,6 +7,7 @@ import WebServices from '../Components/Website/WebService'
 import WebOffers from '../Components/Website/WebOffers'
 import WebBenefits from '../Components/Website/WebBenefits'
 import Form from '../Components/Contact/Form'
+import WebFAQ from '../Components/Website/WebFAQ'
 
 const Website = () => {
   return (
@@ -18,6 +19,7 @@ const Website = () => {
       <WebBenefits />
       <WebCTA />
       <Form />
+      <WebFAQ />
     </Box>
   )
 }
