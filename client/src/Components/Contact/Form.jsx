@@ -6,20 +6,23 @@ import emailjs from "emailjs-com";
 const Form = () => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
+  const [phone, setPhone] = React.useState("");
   const [message, setMessage] = React.useState("");
   const [formError, setFormError] = React.useState({
     name: false,
     email: false,
+    phone: false,
     message: false,
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !phone) {
       setFormError({
         name: !name,
         email: !email,
+        phone: !phone,
         message: !message,
       });
       return;
@@ -32,6 +35,7 @@ const Form = () => {
     const templateParams = {
       name: name,
       email: email,
+      phone: phone,
       message: message,
     };
 
@@ -40,6 +44,7 @@ const Form = () => {
         console.log("Email sent successfully!", response.status, response.text);
         setName("");
         setEmail("");
+        setPhone("");
         setMessage("");
       },
       (error) => {
@@ -91,7 +96,7 @@ const Form = () => {
                     </svg>
 
                     <span className="mx-2 text-white truncate w-72">
-                      Kali Mandir Road, Hanuman Nagar, Patna, Bihar 800020
+                      Hanuman Nagar, Patna, Bihar, India
                     </span>
                   </p>
 
@@ -180,6 +185,21 @@ const Form = () => {
                       />
                     </div>
 
+                    <div className="flex-1 mt-6">
+                      <label className="block mb-2 text-sm text-gray-600 ">
+                        Phone Number
+                      </label>
+                      <input
+                        type="phone"
+                        placeholder="Phone Number"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        error={formError.phone}
+                        helperText={formError.phone ? "Phone is required" : ""}
+                        className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                      />
+                    </div>
+
                     <div className="w-full mt-6">
                       <label className="block mb-2 text-sm text-gray-600 ">
                         Message
@@ -197,8 +217,9 @@ const Form = () => {
                     </div>
 
                     <button
-                     onClick={handleSubmit}
-                     className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-amber-400 rounded-md hover:bg-amber-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50">
+                      onClick={handleSubmit}
+                      className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-amber-400 rounded-md hover:bg-amber-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50"
+                    >
                       get in touch
                     </button>
                   </form>

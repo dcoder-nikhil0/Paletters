@@ -3,24 +3,24 @@ import React, { useState } from "react";
 
 const faqs = [
   {
-    question: "How can I pay for my appointment?",
+    question: "What services does a branding agency offer?",
     answer:
-      "You can pay for your appointment using various methods including credit card, UPI, net banking, or at the time of service. Please refer to the confirmation email for more details.",
+      "A branding agency helps businesses create, develop, and manage their brand identity. This typically includes brand strategy, logo and visual identity design, messaging and tone of voice, brand guidelines, and sometimes web design, packaging, and marketing collateral.",
   },
   {
-    question: "Is the cost of the appointment covered by private health insurance?",
+    question: "How long does the branding process take?",
     answer:
-      "Yes, some services may be covered by private insurance. Please contact your provider or check your plan details for confirmation.",
+      "The timeline can vary depending on the scope of the project. A full branding package—from strategy to final deliverables—usually takes 4 to 12 weeks. We’ll provide a detailed timeline after understanding your goals and needs.",
   },
   {
-    question: "Do I need a referral?",
+    question: "What’s the difference between a logo and a brand?",
     answer:
-      "Referrals are not necessary for all services. However, some specialized consultations may require one. Please contact us for guidance.",
+      "A logo is a visual symbol that represents your business, while your brand is the entire perception of your company—your values, messaging, visual identity, customer experience, and more. A strong brand goes far beyond just a logo.",
   },
   {
-    question: "What are your opening hours?",
+    question: "Can you work with startups or businesses that are rebranding?",
     answer:
-      "We are open from 9 AM to 6 PM, Monday to Friday. Weekend appointments may be available on request.",
+      "Absolutely. We work with both new businesses looking to establish their brand and established companies aiming to refresh or reposition their brand. We tailor our approach based on your current stage and future goals.",
   },
   {
     question: "What can I expect at my first consultation?",
@@ -46,10 +46,7 @@ const HomeFAQ = () => {
 
           <div className="mt-12 space-y-8">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="border-2 rounded-lg border-gray-700"
-              >
+              <div key={index} className="border-2 rounded-lg border-gray-700">
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="flex items-center justify-between w-full p-8"
@@ -89,9 +86,7 @@ const HomeFAQ = () => {
                 {openIndex === index && (
                   <>
                     <hr className="border-gray-700" />
-                    <p className="p-8 text-sm text-gray-500 ">
-                      {faq.answer}
-                    </p>
+                    <p className="p-8 text-sm text-gray-500 ">{faq.answer}</p>
                   </>
                 )}
               </div>
