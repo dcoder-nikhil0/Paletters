@@ -1,14 +1,59 @@
 import { Box } from "@mui/material";
 import React from "react";
-import bg from "../../assets/bg.webp"
+import bg from "../../assets/bg.webp";
+import emailjs from "emailjs-com";
 
 const Form = () => {
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const [formError, setFormError] = React.useState({
+    name: false,
+    email: false,
+    message: false,
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !message) {
+      setFormError({
+        name: !name,
+        email: !email,
+        message: !message,
+      });
+      return;
+    }
+
+    const serviceID = "service_8co08zm";
+    const templateID = "template_cwznewj";
+    const userID = "sSQ85uZzIdZiAtQOI";
+
+    const templateParams = {
+      name: name,
+      email: email,
+      message: message,
+    };
+
+    emailjs.send(serviceID, templateID, templateParams, userID).then(
+      (response) => {
+        console.log("Email sent successfully!", response.status, response.text);
+        setName("");
+        setEmail("");
+        setMessage("");
+      },
+      (error) => {
+        console.error("Error sending email:", error);
+      }
+    );
+  };
+
   return (
     <Box>
       <section
         className="min-h-screen bg-cover "
         style={{
-          backgroundImage : 'url(' + bg + ')',
+          backgroundImage: "url(" + bg + ")",
         }}
       >
         <div className="flex flex-col min-h-screen bg-black/60">
@@ -111,7 +156,11 @@ const Form = () => {
                       </label>
                       <input
                         type="text"
-                        placeholder="John Doe"
+                        placeholder="Full Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        error={formError.name}
+                        helperText={formError.name ? "Name is required" : ""}
                         className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                       />
                     </div>
@@ -122,7 +171,11 @@ const Form = () => {
                       </label>
                       <input
                         type="email"
-                        placeholder="johndoe@example.com"
+                        placeholder="Email address"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        error={formError.email}
+                        helperText={formError.email ? "Email is required" : ""}
                         className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                       />
                     </div>
@@ -132,12 +185,20 @@ const Form = () => {
                         Message
                       </label>
                       <textarea
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        error={formError.message}
+                        helperText={
+                          formError.message ? "Message is required" : ""
+                        }
                         className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48  dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                         placeholder="Message"
                       ></textarea>
                     </div>
 
-                    <button className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-amber-400 rounded-md hover:bg-amber-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50">
+                    <button
+                     onClick={handleSubmit}
+                     className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-amber-400 rounded-md hover:bg-amber-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50">
                       get in touch
                     </button>
                   </form>

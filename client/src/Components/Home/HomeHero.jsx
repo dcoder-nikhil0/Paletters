@@ -1,39 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, TextField } from "@mui/material";
 import { Search } from "@mui/icons-material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import emailjs from "emailjs-com";
+// import {Toaster, toast} from alert;
+import poster from "../../assets/1.webp";
+import post from "../../assets/2.webp";
+import web from "../../assets/3.webp";
+import logo from "../../assets/4.webp";
+import ui from "../../assets/5.webp";
 
 const showcaseData = [
   {
-    img: "/images/design1.png",
-    title: "EBOOK DESIGN",
-    subtitle: "Created for Bottomline",
+    img: poster,
+    title: "POSTER DESIGN",
+    subtitle: "Created for Wonder Momos",
   },
   {
-    img: "/images/design2.png",
+    img: post,
     title: "SOCIAL MEDIA POST",
-    subtitle: "Made for Alpha Studios",
+    subtitle: "Made for Wonder Momos",
   },
   {
-    img: "/images/design3.png",
+    img: logo,
     title: "BRAND LOGO",
-    subtitle: "For NovaTech",
+    subtitle: "For WebComic Studio",
   },
   {
-    img: "/images/design4.png",
-    title: "INFOGRAPHIC",
-    subtitle: "Crafted for VisionCorp",
+    img: web,
+    title: "WEBSITE DEVELOPMENT",
+    subtitle: "Developed for Riddhi Siddhi Girl Hostel",
   },
   {
-    img: "/images/design5.png",
-    title: "PRODUCT PACKAGING",
-    subtitle: "Designed for FreshBites",
+    img: ui,
+    title: "UI/UX DESIGN",
+    subtitle: "Designed for Art of Living",
   },
 ];
 
 const HomeHero = () => {
+  const [email, setEmail] = React.useState("");
+  const [formError, setFormError] = useState({
+    email: false,
+  });
+
+  const handleEmailChange = (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      setFormError({
+        email: !email,
+      });
+      return;
+    }
+
+    const serviceID = "service_fb0msag";
+    const templateID = "template_tt06pgc";
+    const userID = "BzeILQkfCQQ4Ezl8w";
+
+    const templateParams = {
+      email: email,
+    };
+
+    emailjs
+      .send(serviceID, templateID, templateParams, userID)
+      .then((response) => {
+        console.log("Email sent successfully!", response.status, response.text);
+        setEmail("");
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -47,16 +88,16 @@ const HomeHero = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen flex justify-center items-center px-6">
+    <div className="bg-white h-170 flex justify-center items-center px-6">
       <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center justify-between">
         {/* Left Section */}
         <div className="lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-5xl font-bold">
+          <h1 className="text-6xl font-bold">
             <span className="text-yellow-500 italic">Customer Centric</span>{" "}
             <br />
             Global Graphic <br /> Design Agency
           </h1>
-          <p className="text-gray-600 mt-6 text-lg leading-relaxed">
+          <p className="text-gray-600 mt-8 text-lg leading-relaxed">
             We are your one-stop solution for your complete digital marketing
             and graphic design requirements. Uplift your brand's perception
             through our unmatched creative solutions.
@@ -65,7 +106,11 @@ const HomeHero = () => {
           <div className="mt-8 flex flex-col md:flex-row items-center gap-4">
             <TextField
               variant="outlined"
-              placeholder="What do you need?"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              error={formError.email}
+              helperText={formError.email ? "Email is required" : ""}
               InputProps={{
                 startAdornment: <Search className="text-gray-500" />,
                 style: { backgroundColor: "#f3f4f6", borderRadius: "8px" },
@@ -79,6 +124,7 @@ const HomeHero = () => {
                 color: "black",
                 "&:hover": { bgcolor: "#fbbf24" },
               }}
+              onClick={handleEmailChange}
             >
               Request Proposal
             </Button>
@@ -101,7 +147,6 @@ const HomeHero = () => {
                       <p className="font-bold text-sm">{item.title}</p>
                       <p className="text-xs">{item.subtitle}</p>
                     </div>
-                    <span className="ml-2 text-yellow-500">↗️</span>
                   </div>
                 </div>
               ))}

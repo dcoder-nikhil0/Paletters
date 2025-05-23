@@ -12,7 +12,7 @@ const HomeCountups = () => {
   ];
 
   return (
-    <div className="bg-gray-900 text-white py-16">
+    <div className="bg-[#2a2a2a] text-white py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 text-center">
         {counters.map((item, index) => (
           <div key={index} className="flex flex-col items-center">

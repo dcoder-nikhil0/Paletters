@@ -2,7 +2,7 @@ import React from "react";
 
 const PortService = () => {
   return (
-    <div className="bg-gray-900 text-white py-16 px-8">
+    <div className="bg-[#2a2a2a] text-white py-16 px-8">
       <div className="text-center">
         <h2 className="text-4xl font-bold mb-4">Industries We Serve</h2>
         <p className="text-lg text-gray-400 mb-10">
