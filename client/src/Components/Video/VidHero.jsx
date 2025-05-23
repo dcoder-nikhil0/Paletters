@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-import video from "../../assets/video-files-concept-illustration_114360-4418.webp";
+import video from "../../assets/Paletterse post designs_20250524_034232_0000.jpg";
 import { Link } from "react-router-dom";
 
 const ContHero = () => {
