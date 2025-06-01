@@ -4,15 +4,16 @@ import { Link } from "react-router-dom";
 
 const WebOffers = () => {
   const services = [
-    "Website Design",
-    "Interactive Design",
-    "Microsite Design",
-    "Prototype Design",
-    "Wireframe Design",
-    "E-commerce Design",
-    "User Interface Design",
-    "Website Design Consultation",
-    "Blog Page Design",
+    "Business Website Development",
+    "Portfolio Website Design",
+    "E-commerce Website Development",
+    "Landing Page Design",
+    "Personal/Resume Website",
+    "Custom Web Application Development",
+    "Blog/News Website Design",
+    "Website Redesign Services",
+    "Responsive Web Design",
+    "Website Maintenance & Support",
   ];
 
   return (
@@ -20,22 +21,25 @@ const WebOffers = () => {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-4xl font-bold mb-6">
-            Website Development Company <br /> in India
+            WWebsite Development – Powerful, Purpose-Driven Digital Experiences
           </h1>
           <p className="text-gray-600 leading-relaxed mb-8">
-            Your website is arguably your most important digital marketing
-            asset; if it isn't growing your business, it's time to take action
-            for it. With our high-quality website development service, we build
-            websites continuously optimized for the highest search engine
-            placement, hit directly to your market, and convert visitors into
-            paying customers. We implement such innovative ideas focusing on
-            outstanding, high-performing website design. We use advanced
-            technologies and coding languages to develop high-performing
-            websites such as{" "}
-            <span className="font-bold">
-              WordPress, PHP, Drupal, Laravel, NodeJs, ReactJs, Shopify
-            </span>{" "}
-            and WooCommerce for website development.
+            At Paletterse, we create websites that do more than just look
+            great—they perform, engage, and convert. Our team blends
+            cutting-edge design with clean, scalable code to deliver custom
+            websites that reflect your brand and drive user action. From
+            single-page portfolios to complex e-commerce platforms, we build
+            experiences that are fast, responsive, and fully optimized for SEO.
+            <br />
+            We don’t believe in one-size-fits-all solutions. We take time to
+            understand your vision, audience, and business goals, then build a
+            digital platform that works seamlessly across all devices. Whether
+            you need a bold redesign, a fresh launch, or ongoing development
+            support, we’ve got you covered with high-performing, future-ready
+            websites.
+            <br /> With a strong focus on UI/UX, performance, security, and
+            scalability, Paletterse ensures your website doesn’t just exist—but
+            thrives in the digital world.
           </p>
         </div>
 

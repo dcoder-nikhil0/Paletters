@@ -13,10 +13,8 @@ const WebCTA = () => {
             </h2>
 
             <p className="mt-3 text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ex
-              cupiditate corrupti aliquam eum vel consequuntur hic culpa unde
-              natus officia enim est impedit consequatur aut, voluptatem minima
-              repellat non!
+              Design a Stunning Website That Reflects Your Brand – Let’s Start
+              Today!
             </p>
 
             <Link
@@ -33,10 +31,8 @@ const WebCTA = () => {
             </h2>
 
             <p className="mt-3 text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ex
-              cupiditate corrupti aliquam eum vel consequuntur hic culpa unde
-              natus officia enim est impedit consequatur aut, voluptatem minima
-              repellat non!
+              Need a High-Performance Website Built from Scratch? We’ve Got You
+              Covered!
             </p>
 
             <Link
