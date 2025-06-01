@@ -1,6 +1,9 @@
-import React from "react";
 import { Button } from "@mui/material";
 import { ArrowForward } from "@mui/icons-material";
+import video from "../../assets/video.webp";
+import info from "../../assets/infographic-design-portfolio.webp";
+import present from "../../assets/presentation-design.webp";
+import web from "../../assets/website-design-samples-visual-best.webp";
 
 const HoemServices = () => {
   return (
@@ -26,18 +29,18 @@ const HoemServices = () => {
           {[
             {
               title: "Presentation",
-              image: "/images/presentation.png",
-              bgColor: "bg-purple-600",
+              image: present,
+              bgColor: "bg-[#d5a7db]",
             },
             {
               title: "Infographic",
-              image: "/images/infographic.png",
-              bgColor: "bg-blue-500",
+              image: info,
+              bgColor: "bg-[#015391]",
             },
           ].map((service, index) => (
             <div
               key={index}
-              className={`${service.bgColor} rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition transform duration-300`}
+              className={`${service.bgColor} rounded-2xl shadow-lg overflow-hidden  transition transform duration-300`}
             >
               <div className="p-4">
                 <h3 className="text-white font-bold text-lg">
@@ -55,31 +58,30 @@ const HoemServices = () => {
 
         {/* Column 2: Tall item */}
         <div className="row-span-2">
-          <div className="bg-yellow-400 rounded-2xl shadow-lg overflow-hidden h-200 hover:scale-105 transition transform duration-300 flex flex-col">
+          <div className="bg-[#ffd900] rounded-2xl shadow-lg overflow-hidden h-200  transition transform duration-300 flex flex-col">
             <div className="p-4">
               <h3 className="text-black font-bold text-lg">
                 Website Design & Development
               </h3>
             </div>
             <img
-              src="/images/website.png"
+              src={web}
               alt="Website Design & Development"
               className="w-full h-full object-cover"
             />
           </div>
         </div>
 
-        {/* Empty column to maintain 3-column layout */}
-
-        <div className="">
-          <div className="bg-blue-600 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition transform duration-300">
+        {/* Column 3 */}
+        <div>
+          <div className="bg-[#00508a] rounded-2xl shadow-lg overflow-hidden  transition transform duration-300">
             <div className="p-4">
               <h3 className="text-white font-bold text-lg">Video</h3>
             </div>
             <img
-              src="/images/video.png"
+              src={video}
               alt="Video"
-              className="w-full h-80 object-cover"
+              className="w-100 object-fit h-80 object-cover"
             />
           </div>
           <div className="flex justify-center mt-10">
