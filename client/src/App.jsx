@@ -13,6 +13,10 @@ import Video from "./Pages/Video";
 import Portfolio from "./Pages/Portfolio";
 import Design from "./Pages/Design";
 import Marketing from "./Pages/Marketing";
+import Career from "./Pages/Career";
+import Terms from "./Pages/Terms";
+import Privacy from "./Pages/Privacy"
+// import { Policy } from "@mui/icons-material";
 
 function App() {
   return (
@@ -29,6 +33,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/design" element={<Design />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/career" exact element={<Career/>} />
+          <Route path="/tnc" exact element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
         <Footer />
