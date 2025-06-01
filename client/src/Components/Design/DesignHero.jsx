@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import React from "react";
+import { Link } from "react-router-dom"
 import back from "../../assets/back.webp";
 
 const DesignHero = () => {
@@ -20,18 +20,12 @@ const DesignHero = () => {
             </p>
 
             <div class="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
-              <a
-                href="#"
-                class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-700"
+              <Link
+                to="/contact"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition"
               >
-                Get Started
-              </a>
-              <a
-                href="#"
-                class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-gray-700 transition-colors duration-300 transform bg-gray-200 rounded-md lg:mx-4 hover:bg-gray-300"
-              >
-                Learn More
-              </a>
+                Get Proposal →
+              </Link>
             </div>
           </div>
         </div>
