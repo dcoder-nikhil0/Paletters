@@ -6,34 +6,34 @@ const WebBenefits = () => {
   const benefits = [
     {
       icon: <FaHeart className="text-yellow-400 text-4xl" />,
-      title: "Social Connection",
+      title: "Enhanced Brand Storytelling",
       description:
-        "Good web design and development create a user-friendly and engaging online experience. This increases user satisfaction and encourages longer visit durations, which can lead to higher conversion rates and improved customer retention.",
+        "Professional video scripting ensures your message is clear, engaging, and aligned with your brand voice. Editing refines the content, keeping viewers focused and interested. Together, they build stronger emotional connections with your audience.",
     },
     {
       icon: <FaFileVideo  className="text-yellow-400 text-4xl" />,
-      title: "Event Documentation",
+      title: "Boosted Engagement and Reach",
       description:
-        "Professionally designed and well-developed websites are optimized for search engines. A clean, responsive design, coupled with efficient coding, improves search engine rankings, making your site more visible and accessible to potential customers.",
+        "Well-edited videos with compelling scripts capture attention quickly and retain viewer interest. This leads to higher shares, comments, and watch times across platforms. Increased engagement helps expand your brand’s reach organically.",
     },
     {
       icon: <GiBookCover className="text-yellow-400 text-4xl" />,
-      title: "Educational Values",
+      title: "Improved Conversion Rate",
       description:
-        "A well-designed website reflects your brand's identity and professionalism. Consistent branding, including colors, fonts, and layout, strengthens your brand's image and helps in building trust and credibility with your audience.",
+        "Videos with structured scripts and polished editing guide viewers toward calls-to-action effectively. They help explain products or services with clarity and confidence. This builds trust and drives higher conversion rates.",
     },
     {
       icon: <FaChartBar className="text-yellow-400 text-4xl" />,
-      title: "Global Reach",
+      title: "Professionalism & Brand Consistency",
       description:
-        "In an era where online presence is crucial, having a website that is both aesthetically appealing and functionally superior gives you a significant edge in the market, attracting more customers and driving business growth.",
+        "Scripted and edited videos ensure every piece of content looks and sounds professional. This consistency reinforces your brand identity across all channels. It also sets you apart from competitors using low-quality content.",
     },
   ];
 
   return (
     <section className="py-16 bg-white text-center">
       <h2 className="text-4xl font-bold">
-        Benefits of Web Design and Development
+        Benefits of Video Production
       </h2>
       <p className="text-lg text-gray-600 mt-4">
         In addition to enhancing the user experience, a good website serves
