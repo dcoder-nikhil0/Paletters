@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import back from "../../assets/back.webp";
 
 const DesignHero = () => {
@@ -14,9 +14,10 @@ const DesignHero = () => {
             </h2>
 
             <p class="mt-4 text-sm text-gray-500 lg:text-base">
-              Transforming ideas into stunning visuals that speak louder than
-              words. From branding to digital graphics, I craft designs that
-              connect, inspire, and captivate.
+              At Paletterse, we create eye-catching and meaningful designs that
+              communicate your brand's identity with clarity and impact. From
+              logos to full brand kits, our graphic design services blend
+              creativity with strategy to leave a lasting impression.
             </p>
 
             <div class="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
@@ -37,7 +38,6 @@ const DesignHero = () => {
               backgroundImage: "url(" + back + ")",
             }}
           >
-            <div class="w-full h-full bg-black opacity-25"></div>
           </div>
         </div>
       </div>

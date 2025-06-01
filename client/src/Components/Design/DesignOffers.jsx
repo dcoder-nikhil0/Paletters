@@ -4,15 +4,16 @@ import { Link } from "react-router-dom";
 
 const WebOffers = () => {
   const services = [
-    "Product Explainer Video",
-    "Interactive Design",
-    "Live Action Explainer Videos",
-    "Video Invitation Services",
-    "YouTube Video Marketing",
-    "Corporate Video Production",
-    "Video Editing Services",
-    "Video Testimonials",
-    "Video Production Consultation",
+    "Logo Design",
+    "Brand Identity & Brand Kit",
+    "Business Card & Stationery Design",
+    "Brochure & Flyer Design",
+    "Packaging Design",
+    "Poster & Banner Design",
+    "Social Media Creatives",
+    "Infographics",
+    "Illustration Design",
+    "UI/UX Design Assets",
   ];
 
   return (
@@ -20,22 +21,24 @@ const WebOffers = () => {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-4xl font-bold mb-6">
-            Corporate Video Production Company
+            Graphic Design – Transforming Ideas into Visual Masterpieces
           </h1>
           <p className="text-gray-600 leading-relaxed mb-8">
-            Paletterse is the leading corporate video production company in
-            Noida, India, and we are a team of skilled crews, professional
-            equipment, and meticulous planning. High-quality cameras, lighting,
-            and audio gear ensure crisp visuals and clear sound. Our team of
-            directors, cinematographers, and sound engineers contributes
-            expertise to every aspect of production. Detailed story boarding
-            captures nuances, enhancing the final narrative. Professional
-            editing refines footage, incorporating colour correction and
-            graphics for a polished outcome. This approach represents the brand
-            professionally and ensures consistency across platforms. Ultimately,
-            a corporate video shoot is a comprehensive process that results in
-            engaging, premium-quality videos, conveying messages effectively to
-            diverse audiences.
+            At Paletterse, our graphic design services go beyond making things
+            look good—we bring your ideas to life through strategic, creative,
+            and impactful visual communication. Whether you're launching a
+            brand, revamping your identity, or promoting a new product, we
+            design with purpose and precision to ensure your message connects
+            and converts. <br /> Design isn’t just decoration—it’s the first
+            impression, the emotional connection, and the voice of your brand.
+            That’s why our team collaborates closely with you to understand your
+            vision, values, and goals, then crafts customized visuals that
+            reflect your brand identity and captivate your audience. From sleek
+            minimalism to bold creativity, we tailor every design to suit your
+            style and business objectives. <br /> Whether you're in need of
+            print designs or digital assets, Paletterse delivers high-quality
+            visuals that are both aesthetically stunning and functionally
+            effective.
           </p>
         </div>
 

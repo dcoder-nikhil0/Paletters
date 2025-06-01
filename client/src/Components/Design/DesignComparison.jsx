@@ -11,7 +11,7 @@ const DesignComparison = () => {
         </h1>
         <p className="text-center text-gray-600 mb-12">
           Choose the best package model for graphic design services that meet
-          your requirements. The comparison chart helps you decide which model
+          your requirements.<br/> The comparison chart helps you decide which model
           would be the best fit:
         </p>
 
