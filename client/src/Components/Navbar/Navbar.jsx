@@ -28,8 +28,8 @@ const Navbar = () => {
         <Link to="/video" className="hover:text-yellow-500">
           Video
         </Link>
-        <Link to="/content" className="hover:text-yellow-500">
-          Content
+        <Link to="/marketing" className="hover:text-yellow-500">
+          Marketing
         </Link>
         <Link to="/about" className="hover:text-yellow-500">
           About Us
