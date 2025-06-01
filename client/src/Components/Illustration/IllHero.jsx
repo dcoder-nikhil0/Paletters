@@ -10,17 +10,14 @@ const IllHero = () => {
         <div class="flex items-center justify-center w-full px-6 py-8 lg:h-[32rem] lg:w-1/2">
           <div class="max-w-xl">
             <h2 class="text-3xl font-semibold text-gray-800 lg:text-4xl">
-            Digital Illustration Services
+              Digital Illustration Services
             </h2>
 
             <p class="mt-4 text-sm text-gray-500 lg:text-base">
-              Our expertise lies in transforming concepts into engaging digital
-              illustrations that connect with your target audience. Our skilled
-              team of digital illustrators thrives on creating one-of-a-kind,
-              entirely original artwork, guaranteeing that each piece stands as
-              a work of art. We’re well-equipped to cater to your needs for
-              branding, marketing endeavours, publications, or personal
-              endeavours.
+              Bring stories and ideas to life with custom illustration designs
+              that make your brand stand out. At Paletterse, we craft visuals
+              that are expressive, detailed, and tailored to your unique
+              message.
             </p>
 
             <div class="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
@@ -40,8 +37,7 @@ const IllHero = () => {
             style={{
               backgroundImage: "url(" + back + ")",
             }}
-          >
-          </div>
+          ></div>
         </div>
       </div>
     </Box>

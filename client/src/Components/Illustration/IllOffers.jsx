@@ -3,16 +3,16 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 const IllOffers = () => {
   const services = [
-    "Illustration for Books",
-    "Illustration for Magazines",
-    "AI Generated Images",
+    "Character Illustration",
+    "Children’s Book Illustration",
     "Mascot Design",
-    "Icon Design",
-    "Vector Illustration",
-    "Illustration for Websites",
-    "Illustration for Marketing",
-    "Storyboarding",
-    "Technical Illustration",
+    "Editorial Illustration",
+    "Infographic Illustration",
+    "Product Illustration",
+    "Storyboarding & Comic Art",
+    "Educational Illustration",
+    "Custom Icon Sets",
+    "Packaging Illustration",
   ];
 
   return (
@@ -20,25 +20,22 @@ const IllOffers = () => {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-4xl font-bold mb-6">
-            Top Digital Illustration Services in India
+            Illustration Design – Creative Visuals That Speak Louder Than Words
           </h1>
           <p className="text-gray-600 leading-relaxed mb-8">
-            Paletterse is a leading digital illustration company in
-            India. It is your partners in bringing your ideas to life through
-            captivating illustrations. Whether you need a custom digital
-            illustration agency for books, presentations, print, or digital
-            media, our team of skilled and certified professionals is here to
-            transform your vision into stunning visuals. Paletterse's Digital
-            Illustration service offers a smooth creative journey, meticulous
-            attention to particulars, and a finished product surpassing your
-            expectations. Enhance your projects with our artistic touch,
-            allowing your concepts to materialize in the most visually striking
-            manner.
-            <br />
-            We think good illustrations do more than just show something. They
-            tell a story, make people feel things, and leave a lasting mark.
-            Come work with us and see how our digital illustration services can
-            make your projects stand out.
+            At Paletterse, our illustration design service blends art and
+            strategy to deliver visuals that captivate, communicate, and
+            inspire. Whether you're a business, author, educator, or brand, we
+            help you turn complex concepts into beautiful, easy-to-understand
+            illustrations that resonate with your audience.
+            <br /> Illustrations add a unique, human touch to your brand. They
+            go beyond generic stock visuals to deliver storytelling through
+            custom artwork. Our team of skilled illustrators creates everything
+            from digital characters and mascots to educational infographics and
+            product visuals—designed to fit seamlessly within your brand’s
+            aesthetic and purpose. <br /> Whether for print, digital media,
+            apps, or merchandise, we ensure your illustrations leave a lasting
+            impression through creativity, consistency, and clarity.
           </p>
         </div>
 

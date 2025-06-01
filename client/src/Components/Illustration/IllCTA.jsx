@@ -13,10 +13,7 @@ const IllCTA = () => {
             </h2>
 
             <p className="mt-3 text-gray-500 ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ex
-              cupiditate corrupti aliquam eum vel consequuntur hic culpa unde
-              natus officia enim est impedit consequatur aut, voluptatem minima
-              repellat non!
+              Bring Your Ideas to Life with Custom Illustrations — Get Started Today!
             </p>
 
             <Link
@@ -33,15 +30,11 @@ const IllCTA = () => {
             </h2>
 
             <p className="mt-3 text-gray-500 ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ex
-              cupiditate corrupti aliquam eum vel consequuntur hic culpa unde
-              natus officia enim est impedit consequatur aut, voluptatem minima
-              repellat non!
+              Need Unique Icons That Match Your Brand? Let’s Design Them Together!
             </p>
 
             <Link
               to="/contact"
-              href="#"
               className="my-6 py-3 border border-amber-400 hover:bg-yellow-500 hover:text-black text-black font-bold px-6 rounded-full shadow-lg transition"
             >
               Start now
