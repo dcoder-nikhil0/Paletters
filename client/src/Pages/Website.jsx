@@ -1,5 +1,4 @@
 import { Box } from '@mui/material'
-import React from 'react'
 import WebCTA from '../Components/Website/WebCTA'
 import WebHero from '../Components/Website/WebHero'
 import WhyChooseUs from '../Components/WhyChooseUs'

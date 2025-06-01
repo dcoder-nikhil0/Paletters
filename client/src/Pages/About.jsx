@@ -1,5 +1,4 @@
 import { Box } from '@mui/material'
-import React from 'react'
 import AboutHero from '../Components/About/AboutHero'
 import AboutValue from '../Components/About/AboutValue'
 import AboutMission from '../Components/About/AboutMission'

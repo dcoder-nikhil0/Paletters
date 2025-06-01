@@ -1,5 +1,4 @@
 import { Box } from '@mui/material'
-import React from 'react'
 import ContHero from '../Components/Marketing/ContHero'
 import ContOffers from '../Components/Marketing/ContOffers'
 import ContServices from '../Components/Marketing/ContServices'

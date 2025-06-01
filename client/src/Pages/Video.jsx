@@ -1,5 +1,4 @@
 import { Box } from '@mui/material'
-import React from 'react'
 import VidHero from '../Components/Video/VidHero'
 import VidOffers from '../Components/Video/VidOffers'
 import VidBenefits from '../Components/Video/VidBenefits'

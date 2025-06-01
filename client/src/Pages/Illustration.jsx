@@ -4,7 +4,6 @@ import IllHero from '../Components/Illustration/IllHero'
 import IllOffers from '../Components/Illustration/IllOffers'
 import IllBenefits from '../Components/Illustration/IllBenefits'
 import IllCTA from '../Components/Illustration/IllCTA'
-import IllServices from '../Components/Illustration/IllServices'
 import Form from "../Components/Contact/Form"
 import WhyChooseUs from './../Components/WhyChooseUs';
 import IllFAQ from '../Components/Illustration/IllFAQ'
@@ -14,7 +13,6 @@ const Illustration = () => {
     <Box>
       <IllHero />
       <IllOffers />
-      {/* <IllServices /> */}
       <IllBenefits />
       <WhyChooseUs />
       <IllCTA/>
