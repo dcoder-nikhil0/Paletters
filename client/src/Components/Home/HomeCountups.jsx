@@ -12,17 +12,14 @@ const HomeCountups = () => {
   ];
 
   return (
-    <div className="bg-[#2a2a2a] text-white py-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 text-center">
+    <div className="bg-[#2a2a2a] text-white py-12 px-4 sm:px-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-8 sm:gap-10 text-center">
         {counters.map((item, index) => (
           <div key={index} className="flex flex-col items-center">
-            <CountUp
-              end={item.value}
-              duration={3}
-              suffix={item.suffix}
-              className="text-4xl font-bold"
-            />
-            <p className="text-sm mt-2">{item.label}</p>
+            <span className="text-3xl sm:text-4xl font-bold">
+              <CountUp end={item.value} duration={3} suffix={item.suffix} />
+            </span>
+            <p className="text-sm sm:text-base mt-2">{item.label}</p>
           </div>
         ))}
       </div>

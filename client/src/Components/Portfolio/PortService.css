@@ -1,0 +1,137 @@
+.port-service {
+  background-color: #2a2a2a;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.port-service .header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.port-service .header p {
+  font-size: 1.125rem;
+  color: #a0a0a0;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.industry-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Size classes for industry items */
+.industry-item {
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.industry-item:hover {
+  color: #a0a0a0;
+}
+
+.size-xxs {
+  font-size: 0.75rem; /* ~ text-sm */
+}
+
+.size-xs {
+  font-size: 1rem; /* ~ text-base */
+}
+
+.size-sm {
+  font-size: 1.25rem; /* ~ text-lg */
+}
+
+.size-md {
+  font-size: 1.5rem; /* ~ text-xl */
+}
+
+.size-lg {
+  font-size: 2rem; /* ~ text-2xl */
+}
+
+.size-xl {
+  font-size: 3rem; /* ~ text-4xl */
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .port-service .header h2 {
+    font-size: 2rem;
+  }
+
+  .port-service .header p {
+    font-size: 1rem;
+  }
+
+  .industry-list {
+    gap: 1rem;
+  }
+
+  .size-xl {
+    font-size: 2.5rem;
+  }
+
+  .size-lg {
+    font-size: 1.75rem;
+  }
+
+  .size-md {
+    font-size: 1.25rem;
+  }
+
+  .size-sm {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .port-service .header h2 {
+    font-size: 1.75rem;
+  }
+
+  .port-service .header p {
+    font-size: 0.9rem;
+  }
+
+  .industry-list {
+    gap: 0.8rem;
+  }
+
+  .size-xl {
+    font-size: 2rem;
+  }
+
+  .size-lg {
+    font-size: 1.5rem;
+  }
+
+  .size-md {
+    font-size: 1rem;
+  }
+
+  .size-sm {
+    font-size: 0.9rem;
+  }
+
+  .size-xs {
+    font-size: 0.8rem;
+  }
+
+  .size-xxs {
+    font-size: 0.7rem;
+  }
+}

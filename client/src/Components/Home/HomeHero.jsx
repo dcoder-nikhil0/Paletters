@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import emailjs from "emailjs-com";
-// import {Toaster, toast} from alert;
+
 import poster from "../../assets/1.webp";
 import post from "../../assets/2.webp";
 import web from "../../assets/3.webp";
@@ -41,18 +41,14 @@ const showcaseData = [
 ];
 
 const HomeHero = () => {
-  const [email, setEmail] = React.useState("");
-  const [formError, setFormError] = useState({
-    email: false,
-  });
+  const [email, setEmail] = useState("");
+  const [formError, setFormError] = useState({ email: false });
 
   const handleEmailChange = (e) => {
     e.preventDefault();
 
     if (!email) {
-      setFormError({
-        email: !email,
-      });
+      setFormError({ email: true });
       return;
     }
 
@@ -60,15 +56,14 @@ const HomeHero = () => {
     const templateID = "template_tt06pgc";
     const userID = "BzeILQkfCQQ4Ezl8w";
 
-    const templateParams = {
-      email: email,
-    };
+    const templateParams = { email };
 
     emailjs
       .send(serviceID, templateID, templateParams, userID)
       .then((response) => {
         console.log("Email sent successfully!", response.status, response.text);
         setEmail("");
+        setFormError({ email: false });
       })
       .catch((error) => {
         console.error("Error sending email:", error);
@@ -88,22 +83,22 @@ const HomeHero = () => {
   };
 
   return (
-    <div className="bg-white h-170 flex justify-center items-center px-6">
-      <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center justify-between">
+    <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
         {/* Left Section */}
-        <div className="lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-6xl font-bold">
+        <div className="w-full lg:w-1/2 text-center lg:text-left">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
             <span className="text-yellow-500 italic">Customer Centric</span>{" "}
             <br />
             Global Graphic <br /> Design Agency
           </h1>
-          <p className="text-gray-600 mt-8 text-lg leading-relaxed">
+          <p className="text-gray-600 mt-6 text-base sm:text-lg leading-relaxed">
             We are your one-stop solution for your complete digital marketing
             and graphic design requirements. Uplift your brand's perception
             through our unmatched creative solutions.
           </p>
 
-          <div className="mt-8 flex flex-col md:flex-row items-center gap-4">
+          <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
             <TextField
               variant="outlined"
               placeholder="Enter your email"
@@ -115,7 +110,7 @@ const HomeHero = () => {
                 startAdornment: <Search className="text-gray-500" />,
                 style: { backgroundColor: "#f3f4f6", borderRadius: "8px" },
               }}
-              className="w-full md:w-96"
+              className="w-full sm:w-96"
             />
             <Button
               variant="contained"
@@ -132,7 +127,7 @@ const HomeHero = () => {
         </div>
 
         {/* Right Section: Carousel */}
-        <div className="lg:w-1/2 flex justify-center mt-12 lg:mt-0">
+        <div className="w-full lg:w-1/2 flex justify-center">
           <div className="w-full max-w-md">
             <Slider {...settings}>
               {showcaseData.map((item, index) => (
@@ -140,13 +135,11 @@ const HomeHero = () => {
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full rounded-lg shadow-lg transform transition hover:scale-105"
+                    className="w-full rounded-lg shadow-lg transform transition duration-300 hover:scale-105"
                   />
-                  <div className="absolute bottom-6 left-6 bg-black text-white px-4 py-2 rounded-lg shadow-md flex items-center">
-                    <div>
-                      <p className="font-bold text-sm">{item.title}</p>
-                      <p className="text-xs">{item.subtitle}</p>
-                    </div>
+                  <div className="absolute bottom-4 left-4 bg-black bg-opacity-80 text-white px-3 py-2 rounded-md shadow-md">
+                    <p className="font-semibold text-sm">{item.title}</p>
+                    <p className="text-xs">{item.subtitle}</p>
                   </div>
                 </div>
               ))}
