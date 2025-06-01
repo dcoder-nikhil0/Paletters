@@ -8,11 +8,11 @@ import Footer from "./Components/Footer/Footer";
 import NotFound from "./Pages/NotFound";
 import Contact from "./Pages/Contact";
 import Website from "./Pages/Website";
-// import Content from "./Pages/Content";
 import Illustration from "./Pages/Illustration";
 import Video from "./Pages/Video";
 import Portfolio from "./Pages/Portfolio";
 import Design from "./Pages/Design";
+import Marketing from "./Pages/Marketing";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route path="/illustration" element={<Illustration />} />
           <Route path="/website" element={<Website />} />
           <Route path="/video" element={<Video />} />
-          {/* <Route path="/content" element={<Content />} /> */}
+          <Route path="/marketing" element={<Marketing />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/design" element={<Design />} />
           <Route path="/portfolio" element={<Portfolio />} />
