@@ -1,11 +1,10 @@
 import { Box } from "@mui/material";
-import React from "react";
 import { Link } from "react-router-dom";
 
 const ContCTA = () => {
   return (
     <Box>
-      <section className="bg-white dark:bg-gray-900">
+      <section className="bg-[#2a2a2a]">
         <div className="container grid grid-cols-1 gap-8 px-4 py-12 mx-auto lg:grid-cols-2">
           <div className="flex flex-col items-center max-w-lg mx-auto text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-gray-800 dark:text-white">
@@ -40,7 +39,7 @@ const ContCTA = () => {
             </p>
 
             <a
-              href="#"
+              href="/contact"
               className="my-6 py-3 border border-amber-400 hover:bg-yellow-500 hover:text-white text-amber-400 font-bold px-6 rounded-full shadow-lg transition"
             >
               Start now

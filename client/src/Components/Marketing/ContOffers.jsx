@@ -1,18 +1,17 @@
 import { CheckCircle } from "lucide-react";
-import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const ContOffers = () => {
   const services = [
-    "Website Design",
-    "Interactive Design",
-    "Microsite Design",
-    "Prototype Design",
-    "Wireframe Design",
-    "E-commerce Design",
-    "User Interface Design",
-    "Website Design Consultation",
-    "Blog Page Design",
+    "Social Media Marketing",
+    "Search Engine Optimization",
+    "Pay-per-Click Advertising",
+    "Content Writing & Copywriting",
+    "Email Marketing",
+    "Influencer Marketing",
+    "Campaign Strategy & Management",
+    "Analytics & Performance Tracking",
+    "Brand Messaging & Positioning",
   ];
 
   return (
@@ -20,22 +19,21 @@ const ContOffers = () => {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-4xl font-bold mb-6">
-            Website Development Company <br /> in India
+            Marketing Services – Fuel Your Growth with Strategic Brilliance
           </h1>
           <p className="text-gray-600 leading-relaxed mb-8">
-            Your website is arguably your most important digital marketing
-            asset; if it isn't growing your business, it's time to take action
-            for it. With our high-quality website development service, we build
-            websites continuously optimized for the highest search engine
-            placement, hit directly to your market, and convert visitors into
-            paying customers. We implement such innovative ideas focusing on
-            outstanding, high-performing website design. We use advanced
-            technologies and coding languages to develop high-performing
-            websites such as{" "}
-            <span className="font-bold">
-              WordPress, PHP, Drupal, Laravel, NodeJs, ReactJs, Shopify
-            </span>{" "}
-            and WooCommerce for website development.
+            At Paletterse, we provide a full suite of digital marketing services
+            designed to elevate your brand visibility, engage your audience, and
+            drive measurable business growth. In today’s competitive digital
+            landscape, simply having a presence isn’t enough—you need powerful
+            strategies, creative content, and the right platforms working
+            together. That’s where we come in. Our marketing experts craft
+            customized strategies that align with your business goals—whether
+            it's gaining followers, improving search rankings, generating leads,
+            or increasing conversions. From search engines to social feeds, we
+            position your brand exactly where your audience spends their time.
+            We combine creativity, data analytics, and industry expertise to
+            make your marketing not only effective but also impactful.
           </p>
         </div>
 

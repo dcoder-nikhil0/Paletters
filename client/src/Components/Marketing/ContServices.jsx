@@ -1,61 +1,62 @@
-import React, { useState } from "react";
-import design from "../../assets/design.webp";
-import dev from "../../assets/dev.webp";
-import interactive from "../../assets/interactive.webp";
-import host from "../../assets/hosting.webp";
-import service from "../../assets/service.webp";
+import { useState } from "react";
+import agency from "../../assets/office-workers-working-team-discussing-work-issues-illustration_1020754-1851.webp";
+import sme from "../../assets/market-launch-concept-illustration_114360-2979.webp";
+import marketing from "../../assets/marketing-consulting-concept-illustration_114360-9149.webp";
+import content from "../../assets/content.webp";
+import { Link } from "react-router-dom";
 
+// ✅ Fixed data keys and descriptions
 const services = {
-  Design: {
-    title: "Website Design Service",
-    description: `At Visual Best, our web design services cover a wide range, including sleek Website and Interactive Designs, focused Microsites, dynamic E-commerce Designs, detailed Prototypes, wireframes, and User Interface Designs. We also provide expert Website Design Consultation and create engaging Blog Page Designs to enhance your digital footprint. We will create and optimize your landing page so that you generate excellent leads and depict your brand message to your target audience.`,
+  "Social Media Marketing (SMM)": {
+    title: "Amplify Your Brand with Strategic Social Media Marketing",
+    description: `SMM involves promoting your brand, products, or services on social media platforms to increase engagement, followers, and sales. It builds a strong online presence and a community around your business.`,
     features: [
-      "Custom Design",
-      "Dynamic Prototype",
-      "Landing Page Design",
-      "Ceros Experience Design",
+      "Enhances brand visibility and customer engagement.",
+      "Uses targeted campaigns on platforms like Instagram, Facebook, and LinkedIn.",
     ],
-    image: design, // Replace with your image path
+    image: agency,
   },
-  Development: {
-    title: "Web Development Service",
-    description: `Our web development team builds fast, secure, and scalable web applications using the latest technologies. We specialize in frontend and backend development, API integration, and more.`,
+  "Search Engine Optimization (SEO)": {
+    title: "Improve Visibility and Traffic with Effective SEO",
+    description: `SEO improves your website’s visibility in search engine results to drive organic traffic. It focuses on keywords, content, and technical factors for better ranking.`,
     features: [
-      "Full-stack Development",
-      "API Integration",
-      "Scalable Architecture",
+      "Boosts long-term website traffic and search rankings.",
+      "Builds trust and authority with optimized content and structure.",
     ],
-    image: dev, // Replace with your image path
+    image: sme,
   },
-  Interactive: {
-    title: "Interactive Solutions",
-    description: `We create interactive websites and applications that engage users with dynamic content, animations, and seamless navigation.`,
-    features: ["Animations", "User Engagement", "Seamless Navigation"],
-    image: interactive, // Replace with your image path
+  "Pay-Per-Click Advertising (PPC)": {
+    title: "Get Instant Leads with PPC Campaigns",
+    description: `PPC is a paid advertising model where you pay for each click on your ad, shown on search engines or platforms. It delivers quick and measurable traffic to your website.`,
+    features: [
+      "Offers instant visibility and lead generation.",
+      "Highly trackable and budget-controlled marketing.",
+    ],
+    image: marketing,
   },
-  Support: {
-    title: "24/7 Support Service",
-    description: `Our support team is available round-the-clock to assist you with technical issues, updates, and maintenance.`,
-    features: ["24/7 Availability", "Technical Assistance", "Regular Updates"],
-    image: service, // Replace with your image path
-  },
-  Hosting: {
-    title: "Reliable Hosting Solutions",
-    description: `We provide secure and high-speed hosting services with guaranteed uptime and regular backups.`,
-    features: ["High-speed Servers", "Regular Backups", "99.9% Uptime"],
-    image: host, // Replace with your image path
+  "Content Writing": {
+    title: "Attract and Convert with Strategic Content Writing",
+    description: `Content writing involves crafting engaging, informative, and SEO-friendly text for websites, blogs, and marketing. It plays a key role in attracting and converting audiences.`,
+    features: [
+      "Strengthens brand voice and trust.",
+      "Supports SEO and drives customer actions.",
+    ],
+    image: content,
   },
 };
 
 export default function ContServices() {
-  const [activeTab, setActiveTab] = useState("Design");
+  // ✅ Set default key to an actual service key
+  const [activeTab, setActiveTab] = useState("Social Media Marketing (SMM)");
 
   return (
     <div className="p-10 bg-gray-50 min-h-screen">
-      <h1 className="text-4xl font-bold text-center mb-12">Our Web Services</h1>
+      <h1 className="text-4xl font-bold text-center mb-12">
+        Who We Are Suitable For?
+      </h1>
 
       <div className="bg-white rounded-3xl shadow-lg max-w-6xl mx-auto overflow-hidden">
-        <div className="flex justify-center border-b-2 pb-4">
+        <div className="flex justify-center border-b-2 pb-4 flex-wrap">
           {Object.keys(services).map((tab) => (
             <button
               key={tab}
@@ -86,22 +87,25 @@ export default function ContServices() {
                 </li>
               ))}
             </ul>
-            <div className="mt-6">
-              <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition">
-                Get High Performing Website →
-              </button>
-            </div>
           </div>
 
-          {/* Image Section */}
-          <div className="order-1 lg:order-2">
+          <div className="order-1 lg:order-2 flex justify-center">
             <img
               src={services[activeTab].image}
               alt={services[activeTab].title}
-              className="w-auto h-auto object-cover rounded-2xl shadow-md hover:scale-105 transition transform duration-300"
+              className="h-[20rem] w-[20rem] object-contain rounded-2xl shadow-md hover:scale-105 transition transform duration-300"
             />
           </div>
         </div>
+      </div>
+
+      <div className="text-center mt-6">
+        <Link
+          to="/contact"
+          className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition"
+        >
+          Book A Free Consultation →
+        </Link>
       </div>
     </div>
   );
