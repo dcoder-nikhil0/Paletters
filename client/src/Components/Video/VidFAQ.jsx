@@ -3,29 +3,29 @@ import React, { useState } from "react";
 
 const faqs = [
   {
-    question: "How can I pay for my appointment?",
+    question: "What types of videos do you produce?",
     answer:
-      "You can pay for your appointment using various methods including credit card, UPI, net banking, or at the time of service. Please refer to the confirmation email for more details.",
+      "We create promotional videos, corporate content, social media clips, event highlights, and more.",
   },
   {
-    question: "Is the cost of the appointment covered by private health insurance?",
+    question: "Can you edit footage we provide?",
     answer:
-      "Yes, some services may be covered by private insurance. Please contact your provider or check your plan details for confirmation.",
+      "Absolutely! We can enhance, trim, and edit your raw footage into a polished final product.",
   },
   {
-    question: "Do I need a referral?",
+    question: "How long does a typical project take?",
     answer:
-      "Referrals are not necessary for all services. However, some specialized consultations may require one. Please contact us for guidance.",
+      "Turnaround time depends on the project scope, but most edits are completed within 5–10 business days.",
   },
   {
-    question: "What are your opening hours?",
+    question: "Do you offer scriptwriting or storyboarding?",
     answer:
-      "We are open from 9 AM to 6 PM, Monday to Friday. Weekend appointments may be available on request.",
+      "Yes, we provide full pre-production services including scriptwriting and storyboarding.",
   },
   {
-    question: "What can I expect at my first consultation?",
+    question: "What’s your pricing model?",
     answer:
-      "Your first consultation will involve understanding your needs, reviewing history, and outlining next steps or a treatment plan.",
+      "Pricing varies by project complexity—contact us for a custom quote tailored to your needs",
   },
 ];
 
@@ -46,10 +46,7 @@ const VidFAQ = () => {
 
           <div className="mt-12 space-y-8">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="border-2 rounded-lg border-gray-700"
-              >
+              <div key={index} className="border-2 rounded-lg border-gray-700">
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="flex items-center justify-between w-full p-8"
@@ -89,9 +86,7 @@ const VidFAQ = () => {
                 {openIndex === index && (
                   <>
                     <hr className="border-gray-700" />
-                    <p className="p-8 text-sm text-gray-500 ">
-                      {faq.answer}
-                    </p>
+                    <p className="p-8 text-sm text-gray-500 ">{faq.answer}</p>
                   </>
                 )}
               </div>
