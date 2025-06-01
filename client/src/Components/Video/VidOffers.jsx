@@ -13,6 +13,7 @@ const WebOffers = () => {
     "Video Editing Services",
     "Video Testimonials",
     "Video Production Consultation",
+    "Animated Social Media Reels",
   ];
 
   return (
@@ -20,22 +21,24 @@ const WebOffers = () => {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-4xl font-bold mb-6">
-            Corporate Video Production Company
+            Video Production – Visual Storytelling That Inspires and Converts
           </h1>
           <p className="text-gray-600 leading-relaxed mb-8">
-            Paletterse is the leading corporate video production company in
-            Noida, India, and we are a team of skilled crews, professional
-            equipment, and meticulous planning. High-quality cameras, lighting,
-            and audio gear ensure crisp visuals and clear sound. Our team of
-            directors, cinematographers, and sound engineers contributes
-            expertise to every aspect of production. Detailed story boarding
-            captures nuances, enhancing the final narrative. Professional
-            editing refines footage, incorporating colour correction and
-            graphics for a polished outcome. This approach represents the brand
-            professionally and ensures consistency across platforms. Ultimately,
-            a corporate video shoot is a comprehensive process that results in
-            engaging, premium-quality videos, conveying messages effectively to
-            diverse audiences.
+            At Paletterse, we specialize in crafting impactful videos that turn
+            ideas into compelling visual stories. Whether you're promoting a
+            product, explaining a service, or building brand awareness, our
+            video production services are designed to captivate, inform, and
+            convert.
+            <br />
+            We handle every step—from scripting and storyboarding to editing and
+            post-production—ensuring your message is not only seen but
+            remembered. With a creative eye and a strategic mindset, we produce
+            content that fits your goals and resonates with your audience,
+            whether it’s for social media, your website, presentations, or ads.
+            <br /> From animated explainers to corporate films and testimonials,
+            Paletterse brings your brand to life through motion, creativity, and
+            emotion—delivering professional results that drive engagement and
+            business growth.
           </p>
         </div>
 

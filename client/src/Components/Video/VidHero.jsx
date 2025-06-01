@@ -10,19 +10,14 @@ const ContHero = () => {
         <div class="flex items-center justify-center w-full px-6 py-8 lg:h-[32rem] lg:w-1/2">
           <div class="max-w-xl">
             <h2 class="text-3xl font-semibold text-gray-800 lg:text-4xl">
-            Corporate Video Editing Services
+              Professional Video Services That Capture Attention
             </h2>
 
             <p class="mt-4 text-sm text-gray-500 lg:text-base">
-              Paletterse is a leading video production agency serving ambitious
-              marketers and brands. Our expertise lies in crafting corporate
-              videos that resonate with your audience and ignite decisive
-              action. With Paletterse, you can forge a robust corporate brand
-              identity and convey your message with unparalleled impact.
-              Catering to both B2B and B2C enterprises, our corporate video
-              production services encompass a spectrum of offerings, ranging
-              from animated videos to live-action films, brand documentaries,
-              and beyond.
+              PFrom explainer videos to promotional edits, we create
+              high-quality visual content that tells your story, engages your
+              audience, and strengthens your brand presence across digital
+              platforms.
             </p>
 
             <div class="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
@@ -42,8 +37,7 @@ const ContHero = () => {
             style={{
               backgroundImage: "url(" + video + ")",
             }}
-          >
-          </div>
+          ></div>
         </div>
       </div>
     </Box>
