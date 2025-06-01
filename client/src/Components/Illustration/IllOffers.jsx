@@ -23,25 +23,17 @@ const IllOffers = () => {
             Top Digital Illustration Services in India
           </h1>
           <p className="text-gray-600 leading-relaxed mb-8">
-            Visual Best is a leading digital illustration company in Noida,
+            Paletterse is a leading digital illustration company in
             India. It is your partners in bringing your ideas to life through
             captivating illustrations. Whether you need a custom digital
             illustration agency for books, presentations, print, or digital
             media, our team of skilled and certified professionals is here to
-            transform your vision into stunning visuals. VisuaBest's Digital
+            transform your vision into stunning visuals. Paletterse's Digital
             Illustration service offers a smooth creative journey, meticulous
             attention to particulars, and a finished product surpassing your
             expectations. Enhance your projects with our artistic touch,
             allowing your concepts to materialize in the most visually striking
             manner.
-            <br />
-            Visual Best has worked with many types of businesses, like tech
-            companies, manufacturers, and online shops. We've made all kinds of
-            pictures, from super realistic ones to simple drawings, for business
-            magazines, blogs, websites, and marketing materials. Our artists are
-            really good at different styles, so we can make a wide variety of
-            images. Whether you want something fun and dreamy or clean and
-            modern, we can do it. Our work is as creative as you can imagine.
             <br />
             We think good illustrations do more than just show something. They
             tell a story, make people feel things, and leave a lasting mark.

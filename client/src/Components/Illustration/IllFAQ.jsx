@@ -3,29 +3,29 @@ import React, { useState } from "react";
 
 const faqs = [
   {
-    question: "How can I pay for my appointment?",
+    question: "What is illustration design, and how is it different from graphic design?",
     answer:
-      "You can pay for your appointment using various methods including credit card, UPI, net banking, or at the time of service. Please refer to the confirmation email for more details.",
+      "Illustration design creates unique visuals for storytelling, while graphic design combines elements like illustrations, text, and photos for broader communication.",
   },
   {
-    question: "Is the cost of the appointment covered by private health insurance?",
+    question: "What's your typical process for an illustration project?",
     answer:
-      "Yes, some services may be covered by private insurance. Please contact your provider or check your plan details for confirmation.",
+      "My process moves from understanding your vision and sketching initial concepts to refining based on your feedback and delivering the final artwork.",
   },
   {
-    question: "Do I need a referral?",
+    question: "What file formats do you deliver, and what are they used for?",
     answer:
-      "Referrals are not necessary for all services. However, some specialized consultations may require one. Please contact us for guidance.",
+      "We deliver common formats like JPEG/PNG for digital use, and scalable vector files (AI) or layered raster files (PSD) for print and further editing.",
   },
   {
-    question: "What are your opening hours?",
+    question: "How long does an illustration project usually take, and what impacts the timeline?",
     answer:
-      "We are open from 9 AM to 6 PM, Monday to Friday. Weekend appointments may be available on request.",
+      "Timelines vary based on complexity, the number of illustrations, revision rounds, and my current workload.",
   },
   {
-    question: "What can I expect at my first consultation?",
+    question: "How much does an illustration cost? Do you offer different pricing models?",
     answer:
-      "Your first consultation will involve understanding your needs, reviewing history, and outlining next steps or a treatment plan.",
+      "Costs depend on project complexity and usage. I offer project-based fees, hourly rates, or retainer agreements, providing a custom quote after understanding your needs.",
   },
 ];
 

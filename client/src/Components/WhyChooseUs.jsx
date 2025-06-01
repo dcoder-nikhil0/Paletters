@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 
 const WhyChooseUs = () => {
   return (
-    <div className="bg-gray-900 text-white py-16 px-8">
+    <div className="bg-[#2a2a2a] text-white py-16 px-8">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6">Why Choose Us?</h2>
         <p className="text-gray-400 mb-12">
-          Visual Best is your go-to source for outstanding custom web services.
+          Paletterse is your go-to source for outstanding custom web services.
           Our dedicated team is committed to helping clients effectively showcase
           and enhance their products or services online. By combining creativity
           with strategic insight, we enable businesses to distinguish themselves
@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
             <FaRegCommentDots className="text-yellow-500 text-5xl mb-4" />
             <h3 className="text-xl font-semibold">Super Responsive</h3>
             <p className="text-gray-400 mt-4 text-center">
-              Visual Best aligns with highly responsive project managers dedicated
+              Paletterse aligns with highly responsive project managers dedicated
               to fostering prompt and transparent communication with our clients.
             </p>
           </div>

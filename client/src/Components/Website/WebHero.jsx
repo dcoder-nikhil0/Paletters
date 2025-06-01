@@ -16,7 +16,7 @@ const WebHero = () => {
             <p className="mt-4 text-sm text-gray-500 lg:text-base">
               We offer professional web development services at affordable rates
               to help your business attract more visitors and keep them on your
-              site! Visual Best is a leading website development company in
+              site! Paletterse is a leading website development company in
               India offering user-friendly web designs and development that help
               you turn site visitors into customers. Our expert website
               developers help you create e-commerce, WordPress, custom, and

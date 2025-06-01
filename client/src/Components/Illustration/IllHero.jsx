@@ -41,7 +41,6 @@ const IllHero = () => {
               backgroundImage: "url(" + back + ")",
             }}
           >
-            {/* <div class="w-full h-full bg-black opacity-25"></div> */}
           </div>
         </div>
       </div>

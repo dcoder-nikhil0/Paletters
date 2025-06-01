@@ -14,10 +14,10 @@ const ContHero = () => {
             </h2>
 
             <p class="mt-4 text-sm text-gray-500 lg:text-base">
-              Visual Best is a leading video production agency serving ambitious
+              Paletterse is a leading video production agency serving ambitious
               marketers and brands. Our expertise lies in crafting corporate
               videos that resonate with your audience and ignite decisive
-              action. With Visual Best, you can forge a robust corporate brand
+              action. With Paletterse, you can forge a robust corporate brand
               identity and convey your message with unparalleled impact.
               Catering to both B2B and B2C enterprises, our corporate video
               production services encompass a spectrum of offerings, ranging

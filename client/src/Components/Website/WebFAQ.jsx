@@ -3,29 +3,29 @@ import React, { useState } from "react";
 
 const faqs = [
   {
-    question: "How can I pay for my appointment?",
+    question: "How long does it take to build a website?",
     answer:
-      "You can pay for your appointment using various methods including credit card, UPI, net banking, or at the time of service. Please refer to the confirmation email for more details.",
+      "Typically, websites take 2–6 weeks depending on the size and features required.",
   },
   {
-    question: "Is the cost of the appointment covered by private health insurance?",
+    question: "Do you offer custom website designs?",
     answer:
-      "Yes, some services may be covered by private insurance. Please contact your provider or check your plan details for confirmation.",
+      "Yes, all our designs are tailored to match your brand and business goals.",
   },
   {
-    question: "Do I need a referral?",
+    question: "Is the website mobile-friendly and responsive?",
     answer:
-      "Referrals are not necessary for all services. However, some specialized consultations may require one. Please contact us for guidance.",
+      "Absolutely, every website we create is fully responsive across all devices.",
   },
   {
-    question: "What are your opening hours?",
+    question: "Can I update the website myself after it’s built?",
     answer:
-      "We are open from 9 AM to 6 PM, Monday to Friday. Weekend appointments may be available on request.",
+      "Yes, we build on user-friendly platforms and offer training if needed.",
   },
   {
-    question: "What can I expect at my first consultation?",
+    question: "Do you provide website maintenance and support?",
     answer:
-      "Your first consultation will involve understanding your needs, reviewing history, and outlining next steps or a treatment plan.",
+      "Yes, we offer ongoing support and maintenance packages to keep your site running smoothly.",
   },
 ];
 
@@ -46,10 +46,7 @@ const WebFAQ = () => {
 
           <div className="mt-12 space-y-8">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="border-2 rounded-lg border-gray-700"
-              >
+              <div key={index} className="border-2 rounded-lg border-gray-700">
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="flex items-center justify-between w-full p-8"
@@ -89,9 +86,7 @@ const WebFAQ = () => {
                 {openIndex === index && (
                   <>
                     <hr className="border-gray-700" />
-                    <p className="p-8 text-sm text-gray-500 ">
-                      {faq.answer}
-                    </p>
+                    <p className="p-8 text-sm text-gray-500 ">{faq.answer}</p>
                   </>
                 )}
               </div>

@@ -14,7 +14,7 @@ const Video = () => {
       <VidHero />
       <VidOffers />
       <VidBenefits />
-      <VidService />
+      {/* <VidService /> */}
       <WhyChooseUs />
       <Form />
       <VidFAQ />
