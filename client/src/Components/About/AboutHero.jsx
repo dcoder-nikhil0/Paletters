@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Box, Typography } from "@mui/material";
-import bg from "../../assets/assest.png";
+import bg from "../../assets/about.webp";
 
 const AboutHero = () => {
   return (

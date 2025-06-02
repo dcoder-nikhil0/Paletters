@@ -1,7 +1,7 @@
 import React from "react";
-import founder1 from "../../assets/me.png";
-import founder2 from "../../assets/aditya.jpg";
-import founder3 from "../../assets/romshi.jpg";
+import founder1 from "../../assets/me.webp";
+import founder2 from "../../assets/aditya.webp";
+import founder3 from "../../assets/romshi.webp";
 
 const founders = [
   {

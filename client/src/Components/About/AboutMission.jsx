@@ -1,5 +1,4 @@
-import React from "react";
-import missionImg from "../../assets/10613439_10139.webp";
+import missionImg from "../../assets/mission.webp";
 
 const AboutMission = () => {
   return (
