@@ -47,64 +47,88 @@ const rows = [
 
 const DesignComparison = () => {
   return (
-    <div className="bg-white min-h-screen p-6 sm:p-10">
+    <div className="bg-white min-h-screen px-4 sm:px-6 lg:px-8 py-12">
       <div className="max-w-6xl mx-auto">
-        {/* Title */}
+        {/* Header */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">
           Project-Based Model vs. Retainer Model
         </h1>
-        <p className="text-center text-gray-600 mb-12 text-sm sm:text-base">
+        <p className="text-center text-gray-600 mb-10 text-sm sm:text-base">
           Choose the best package model for graphic design services that meet
-          your requirements. <br /> The comparison chart helps you decide which
-          model would be the best fit:
+          your requirements. <br className="hidden sm:block" />
+          The comparison chart helps you decide which model would be the best fit:
         </p>
 
-        {/* Responsive Table for Large Screens */}
-        <div className="hidden md:grid grid-cols-3 border rounded-lg overflow-hidden text-sm md:text-base">
+        {/* Desktop Table */}
+        <div className="hidden md:grid grid-cols-3 border rounded-xl overflow-hidden text-sm md:text-base shadow-md">
           <div className="bg-gray-100 p-4 font-semibold"></div>
-          <div className="bg-yellow-100 p-4 font-semibold">
+          <div className="bg-yellow-100 p-4 font-semibold text-center">
             Project-Based Model
           </div>
-          <div className="bg-gray-200 p-4 font-semibold">Retainer Model</div>
+          <div className="bg-gray-200 p-4 font-semibold text-center">
+            Retainer Model
+          </div>
 
           {rows.map((row, i) => (
             <React.Fragment key={i}>
-              <div className="p-4 font-medium border-r">{row.label}</div>
-              <div className="p-4 border-r">{row.project}</div>
-              <div className="p-4">{row.retainer}</div>
+              <div
+                className={`p-4 font-medium border-t border-gray-200 bg-white ${
+                  i % 2 === 0 ? "bg-gray-50" : "bg-white"
+                }`}
+              >
+                {row.label}
+              </div>
+              <div
+                className={`p-4 border-t border-gray-200 ${
+                  i % 2 === 0 ? "bg-yellow-50" : "bg-yellow-100"
+                }`}
+              >
+                {row.project}
+              </div>
+              <div
+                className={`p-4 border-t border-gray-200 ${
+                  i % 2 === 0 ? "bg-gray-50" : "bg-gray-100"
+                }`}
+              >
+                {row.retainer}
+              </div>
             </React.Fragment>
           ))}
 
-          <div className="p-4 font-medium border-r"></div>
+          {/* CTA Row */}
+          <div className="p-4 font-medium border-t border-gray-300 bg-white"></div>
           <Link
             to="/contact"
-            className="p-4 border-r text-center bg-amber-300 font-semibold hover:bg-amber-400 transition"
+            className="p-4 border-t border-gray-300 text-center font-semibold bg-amber-300 hover:bg-amber-400 transition"
           >
             I want to Know More
           </Link>
           <Link
             to="/contact"
-            className="p-4 text-center text-white bg-gray-600 font-semibold hover:bg-gray-700 transition"
+            className="p-4 border-t border-gray-300 text-center font-semibold bg-gray-600 text-white hover:bg-gray-700 transition"
           >
             I want to Know More
           </Link>
         </div>
 
-        {/* Stacked View for Mobile Screens */}
+        {/* Mobile Stack */}
         <div className="md:hidden space-y-6">
           {rows.map((row, i) => (
-            <div key={i} className="border rounded-lg shadow-sm">
+            <div
+              key={i}
+              className="border rounded-lg shadow-md bg-white overflow-hidden"
+            >
               <div className="bg-gray-100 p-4 font-semibold text-gray-800">
                 {row.label}
               </div>
               <div className="p-4 border-t">
-                <span className="block font-medium mb-1 text-yellow-600">
+                <span className="block font-semibold text-yellow-600 mb-1">
                   Project-Based Model
                 </span>
                 <p className="text-sm text-gray-700">{row.project}</p>
               </div>
               <div className="p-4 border-t">
-                <span className="block font-medium mb-1 text-gray-600">
+                <span className="block font-semibold text-gray-600 mb-1">
                   Retainer Model
                 </span>
                 <p className="text-sm text-gray-700">{row.retainer}</p>
@@ -112,16 +136,17 @@ const DesignComparison = () => {
             </div>
           ))}
 
+          {/* Mobile CTA */}
           <div className="flex flex-col gap-4 mt-6">
             <Link
               to="/contact"
-              className="bg-amber-300 hover:bg-amber-400 text-center font-bold py-3 rounded-full"
+              className="bg-amber-300 hover:bg-amber-400 text-center font-bold py-3 rounded-full shadow-md transition"
             >
               I want to Know More (Project-Based)
             </Link>
             <Link
               to="/contact"
-              className="bg-gray-600 hover:bg-gray-700 text-white text-center font-bold py-3 rounded-full"
+              className="bg-gray-600 hover:bg-gray-700 text-white text-center font-bold py-3 rounded-full shadow-md transition"
             >
               I want to Know More (Retainer)
             </Link>
