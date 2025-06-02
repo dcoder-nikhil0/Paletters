@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHeart, FaFileVideo , FaStar, FaChartBar } from "react-icons/fa";
+import { FaHeart, FaFileVideo, FaStar, FaChartBar } from "react-icons/fa";
 import { GiBookCover } from "react-icons/gi";
 
 const WebBenefits = () => {
@@ -11,7 +11,7 @@ const WebBenefits = () => {
         "Professional video scripting ensures your message is clear, engaging, and aligned with your brand voice. Editing refines the content, keeping viewers focused and interested. Together, they build stronger emotional connections with your audience.",
     },
     {
-      icon: <FaFileVideo  className="text-yellow-400 text-4xl" />,
+      icon: <FaFileVideo className="text-yellow-400 text-4xl" />,
       title: "Boosted Engagement and Reach",
       description:
         "Well-edited videos with compelling scripts capture attention quickly and retain viewer interest. This leads to higher shares, comments, and watch times across platforms. Increased engagement helps expand your brand’s reach organically.",
@@ -32,22 +32,24 @@ const WebBenefits = () => {
 
   return (
     <section className="py-16 bg-white text-center">
-      <h2 className="text-4xl font-bold">
-        Benefits of Video Production
+      <h2 className="text-3xl sm:text-4xl font-bold">
+        Benefits of Illustration
       </h2>
-      <p className="text-lg text-gray-600 mt-4">
-        In addition to enhancing the user experience, a good website serves
+      <p className="text-base sm:text-lg text-gray-600 mt-4 px-4 sm:px-0">
+        In addition to enhancing the user experience, a good illustration serves
         multiple purposes:
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-16 gap-8 mt-12 max-w-8xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-8 lg:px-16 mt-12 max-w-7xl mx-auto">
         {benefits.map((item, index) => (
           <div
             key={index}
-            className="py-16 p-2 border rounded-lg shadow-md hover:shadow-lg transition"
+            className="py-10 px-6 border rounded-lg shadow-md hover:shadow-lg transition text-center bg-white"
           >
             <div className="flex justify-center mb-4">{item.icon}</div>
-            <h3 className="text-xl font-semibold">{item.title}</h3>
-            <p className="text-gray-600 mt-2">{item.description}</p>
+            <h3 className="text-lg font-semibold">{item.title}</h3>
+            <p className="text-gray-600 mt-2 text-sm sm:text-base">
+              {item.description}
+            </p>
           </div>
         ))}
       </div>
