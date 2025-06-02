@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button, TextField } from "@mui/material";
 import { Search } from "@mui/icons-material";
 import Slider from "react-slick";
