@@ -56,6 +56,7 @@ const Form = () => {
   return (
     <Box>
       <section
+      id="#"
         className="min-h-screen bg-cover"
         style={{
           backgroundImage: `url(${bg})`,

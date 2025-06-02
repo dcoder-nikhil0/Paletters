@@ -109,7 +109,7 @@ export default function HomeSuit() {
       {/* CTA Button */}
       <div className="text-center mt-10">
         <Link
-          to="/contact"
+          to="/contact#"
           className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition duration-300"
         >
           Book A Free Consultation →

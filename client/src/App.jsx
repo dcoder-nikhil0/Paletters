@@ -16,12 +16,13 @@ import Marketing from "./Pages/Marketing";
 import Career from "./Pages/Career";
 import Terms from "./Pages/Terms";
 import Privacy from "./Pages/Privacy"
-// import { Policy } from "@mui/icons-material";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
     <Box>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
