@@ -96,7 +96,9 @@ const Form = () => {
                   </svg>
 
                   <span className="mx-2 text-white truncate w-72">
+                    <a href="https://maps.app.goo.gl/ViHUJCf5Y3QhmQTb9?g_st=atm">
                     Hanuman Nagar, Patna, Bihar, India
+                    </a>
                   </span>
                 </p>
 
@@ -117,7 +119,9 @@ const Form = () => {
                   </svg>
 
                   <span className="mx-2 text-white truncate w-72">
+                    <a href="tel:+917209543317">
                     +91 72095 43317
+                    </a>
                   </span>
                 </p>
 
@@ -138,7 +142,9 @@ const Form = () => {
                   </svg>
 
                   <span className="mx-2 text-white truncate w-72">
+                    <a href="mailto:paletterse@gmail.com">
                     paletterse@gmail.com
+                    </a>
                   </span>
                 </p>
               </div>
