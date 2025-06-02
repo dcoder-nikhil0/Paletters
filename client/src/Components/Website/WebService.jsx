@@ -40,28 +40,25 @@ const services = {
     features: ["24/7 Availability", "Technical Assistance", "Regular Updates"],
     image: service, // Replace with your image path
   },
-  // Hosting: {
-  //   title: 'Reliable Hosting Solutions',
-  //   description: `We provide secure and high-speed hosting services with guaranteed uptime and regular backups.`,
-  //   features: ['High-speed Servers', 'Regular Backups', '99.9% Uptime'],
-  //   image: host // Replace with your image path
-  // }
 };
 
 export default function WebServices() {
   const [activeTab, setActiveTab] = useState("Design");
 
   return (
-    <div className="p-10 bg-gray-50 min-h-screen">
-      <h1 className="text-4xl font-bold text-center mb-12">Our Web Services</h1>
+    <div className="px-4 sm:px-6 lg:px-8 py-12 bg-gray-50">
+      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10">
+        Our Best Website Services
+      </h1>
 
-      <div className="bg-white rounded-3xl shadow-lg max-w-6xl mx-auto overflow-hidden">
-        <div className="flex justify-center border-b-2 pb-4">
+      <div className="bg-white rounded-3xl shadow-lg max-w-7xl mx-auto overflow-hidden">
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center border-b px-4 sm:px-8 py-4 gap-3">
           {Object.keys(services).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-6 py-3 text-lg font-medium transition ${
+              className={`px-5 py-2 text-base sm:text-lg font-medium transition duration-200 ${
                 activeTab === tab
                   ? "text-orange-500 border-b-4 border-orange-500"
                   : "text-gray-700 hover:text-orange-500"
@@ -72,17 +69,19 @@ export default function WebServices() {
           ))}
         </div>
 
-        <div className="p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        {/* Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 sm:p-10 items-center">
+          {/* Text Section */}
           <div className="order-2 lg:order-1">
-            <h2 className="text-3xl font-semibold">
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
               {services[activeTab].title}
             </h2>
-            <p className="mt-4 text-gray-700">
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
               {services[activeTab].description}
             </p>
-            <ul className="mt-4 list-disc list-inside">
+            <ul className="mt-4 list-disc list-inside space-y-1">
               {services[activeTab].features.map((feature, index) => (
-                <li key={index} className="text-gray-600">
+                <li key={index} className="text-gray-600 text-sm sm:text-base">
                   {feature}
                 </li>
               ))}
@@ -94,17 +93,19 @@ export default function WebServices() {
             <img
               src={services[activeTab].image}
               alt={services[activeTab].title}
-              className="w-auto h-auto object-cover rounded-2xl shadow-md hover:scale-105 transition transform duration-300"
+              className="w-full h-auto max-h-[400px] object-contain rounded-2xl shadow-md transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
       </div>
-      <div className=" text-center mt-8">
+
+      {/* CTA Button */}
+      <div className="text-center mt-10">
         <Link
           to="/contact"
-          className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition"
+          className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition duration-300"
         >
-          Get High Performing Website →
+          Book A Free Consultation →
         </Link>
       </div>
     </div>
