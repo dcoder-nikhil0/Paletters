@@ -5,6 +5,13 @@ import info from "../../assets/infographic-design-portfolio.webp";
 import present from "../../assets/presentation-design.webp";
 import web from "../../assets/website-design-samples-visual-best.webp";
 
+const services = [
+  { title: "Presentation", image: present },
+  { title: "Infographic", image: info },
+  { title: "Website Design & Development", image: web, tall: true },
+  { title: "Video", image: video },
+];
+
 const HoemServices = () => {
   return (
     <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
@@ -24,70 +31,53 @@ const HoemServices = () => {
 
       {/* Grid Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-        {/* Column 1: Two stacked items */}
+        {/* First Column */}
         <div className="flex flex-col gap-6">
-          {[
-            {
-              title: "Presentation",
-              image: present,
-              bgColor: "bg-[#d5a7db]",
-            },
-            {
-              title: "Infographic",
-              image: info,
-              bgColor: "bg-[#015391]",
-            },
-          ].map((service, index) => (
+          {services.slice(0, 2).map((service, index) => (
             <div
               key={index}
-              className={`${service.bgColor} rounded-2xl shadow-lg overflow-hidden transition duration-300`}
+              className="relative overflow-hidden rounded-2xl shadow-lg aspect-[4/3]"
             >
-              <div className="p-4">
-                <h3 className="text-white font-bold text-lg">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-opacity-50 flex items-start p-4">
+                <h3 className="text-white font-bold text-lg z-10">
                   {service.title}
                 </h3>
-              </div>
-              <div className="aspect-[4/3] w-full">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover"
-                />
               </div>
             </div>
           ))}
         </div>
 
-        {/* Column 2: Tall image section */}
-        <div className="flex flex-col">
-          <div className="bg-[#ffd900] rounded-2xl shadow-lg overflow-hidden flex-1 flex flex-col transition duration-300">
-            <div className="p-4">
-              <h3 className="text-black font-bold text-lg">
-                Website Design & Development
-              </h3>
-            </div>
-            <div className="aspect-[3/4] w-full">
-              <img
-                src={web}
-                alt="Website Design & Development"
-                className="w-full h-full object-cover"
-              />
-            </div>
+        {/* Second Column - Tall */}
+        <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[3/4]">
+          <img
+            src={services[2].image}
+            alt={services[2].title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-opacity-50 flex items-start p-4">
+            <h3 className="text-white font-bold text-lg z-10">
+              {services[2].title}
+            </h3>
           </div>
         </div>
 
-        {/* Column 3: Video and Button */}
+        {/* Third Column */}
         <div className="flex flex-col gap-6 justify-between">
-          <div className="bg-[#00508a] rounded-2xl shadow-lg overflow-hidden transition duration-300">
-            <div className="p-4">
-              <h3 className="text-white font-bold text-lg">Video</h3>
-            </div>
-            <div className="aspect-[4/3] w-full">
-              <img
-                src={video}
-                alt="Video"
-                className="w-full h-full object-cover"
-              />
+          <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
+            <img
+              src={services[3].image}
+              alt={services[3].title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-opacity-50 flex items-start p-4">
+              <h3 className="text-white font-bold text-lg z-10">
+                {services[3].title}
+              </h3>
             </div>
           </div>
 
