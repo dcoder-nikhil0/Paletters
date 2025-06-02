@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import React from "react";
 import logo from "../../assets/logo.webp";
 import { FaInstagramSquare, FaFacebookSquare, FaLinkedin} from "react-icons/fa"
 
