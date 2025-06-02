@@ -1,5 +1,4 @@
-import React from "react";
-import { FaHeart, FaFileVideo, FaStar, FaChartBar } from "react-icons/fa";
+import { FaHeart, FaFileVideo, FaChartBar } from "react-icons/fa";
 import { GiBookCover } from "react-icons/gi";
 
 const WebBenefits = () => {
