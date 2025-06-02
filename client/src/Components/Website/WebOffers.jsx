@@ -21,7 +21,7 @@ const WebOffers = () => {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-4xl font-bold mb-6">
-            WWebsite Development – Powerful, Purpose-Driven Digital Experiences
+            Website Development – Powerful, Purpose-Driven Digital Experiences
           </h1>
           <p className="text-gray-600 leading-relaxed mb-8">
             At Paletterse, we create websites that do more than just look

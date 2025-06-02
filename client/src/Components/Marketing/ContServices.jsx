@@ -50,63 +50,68 @@ export default function ContServices() {
   const [activeTab, setActiveTab] = useState("Social Media Marketing (SMM)");
 
   return (
-    <div className="p-10 bg-gray-50 min-h-screen">
-      <h1 className="text-4xl font-bold text-center mb-12">
-        Who We Are Suitable For?
-      </h1>
-
-      <div className="bg-white rounded-3xl shadow-lg max-w-6xl mx-auto overflow-hidden">
-        <div className="flex justify-center border-b-2 pb-4 flex-wrap">
-          {Object.keys(services).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-6 py-3 text-lg font-medium transition ${
-                activeTab === tab
-                  ? "text-orange-500 border-b-4 border-orange-500"
-                  : "text-gray-700 hover:text-orange-500"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
-
-        <div className="p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="order-2 lg:order-1">
-            <h2 className="text-3xl font-semibold">
-              {services[activeTab].title}
-            </h2>
-            <p className="mt-4 text-gray-700">
-              {services[activeTab].description}
-            </p>
-            <ul className="mt-4 list-disc list-inside">
-              {services[activeTab].features.map((feature, index) => (
-                <li key={index} className="text-gray-600">
-                  {feature}
-                </li>
+    <div className="px-4 sm:px-6 lg:px-8 py-12 bg-gray-50">
+          <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10">
+            Our Marketing Solutions
+          </h1>
+    
+          <div className="bg-white rounded-3xl shadow-lg max-w-7xl mx-auto overflow-hidden">
+            {/* Tabs */}
+            <div className="flex flex-wrap justify-center border-b px-4 sm:px-8 py-4 gap-3">
+              {Object.keys(services).map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-5 py-2 text-base sm:text-lg font-medium transition duration-200 ${
+                    activeTab === tab
+                      ? "text-orange-500 border-b-4 border-orange-500"
+                      : "text-gray-700 hover:text-orange-500"
+                  }`}
+                >
+                  {tab}
+                </button>
               ))}
-            </ul>
+            </div>
+    
+            {/* Content */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 sm:p-10 items-center">
+              {/* Text Section */}
+              <div className="order-2 lg:order-1">
+                <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
+                  {services[activeTab].title}
+                </h2>
+                <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                  {services[activeTab].description}
+                </p>
+                <ul className="mt-4 list-disc list-inside space-y-1">
+                  {services[activeTab].features.map((feature, index) => (
+                    <li key={index} className="text-gray-600 text-sm sm:text-base">
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+    
+              {/* Image Section */}
+              <div className="order-1 lg:order-2">
+                <img
+                  src={services[activeTab].image}
+                  alt={services[activeTab].title}
+                  className="w-full h-auto max-h-[400px] object-contain rounded-2xl shadow-md transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+            </div>
           </div>
-
-          <div className="order-1 lg:order-2 flex justify-center">
-            <img
-              src={services[activeTab].image}
-              alt={services[activeTab].title}
-              className="h-[20rem] w-[20rem] object-contain rounded-2xl shadow-md hover:scale-105 transition transform duration-300"
-            />
+    
+          {/* CTA Button */}
+          <div className="text-center mt-10">
+            <Link
+              to="/contact"
+              className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition duration-300"
+            >
+              Book A Free Consultation →
+            </Link>
           </div>
         </div>
-      </div>
-
-      <div className="text-center mt-6">
-        <Link
-          to="/contact"
-          className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition"
-        >
-          Book A Free Consultation →
-        </Link>
-      </div>
-    </div>
   );
 }
