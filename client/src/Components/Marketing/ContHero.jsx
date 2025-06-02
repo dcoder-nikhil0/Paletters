@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
-import marketing from "../../assets/marketing.jpg";
+import marketing from "../../assets/marketing.webp";
 
 const ContHero = () => {
   return (
