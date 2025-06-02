@@ -44,7 +44,7 @@ const HomeHero = () => {
   const [email, setEmail] = useState("");
   const [formError, setFormError] = useState({ email: false });
 
-  const handleEmailChange = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!email) {
@@ -119,7 +119,7 @@ const HomeHero = () => {
                 color: "black",
                 "&:hover": { bgcolor: "#fbbf24" },
               }}
-              onClick={handleEmailChange}
+              onClick={handleSubmit}
             >
               Request Proposal
             </Button>
