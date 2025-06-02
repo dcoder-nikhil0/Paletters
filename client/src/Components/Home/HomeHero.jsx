@@ -52,9 +52,9 @@ const HomeHero = () => {
       return;
     }
 
-    const serviceID = import.meta.env.SERVICE_ID;
-    const templateID = import.meta.env.TEMPLATE_ID;
-    const userID = import.meta.env.USER_ID;
+    const serviceID = "service_fb0msag";
+    const templateID = "template_kep7ygj";
+    const userID = "0sWWLJ-CN603B8Js3";
 
     const templateParams = { email };
 
