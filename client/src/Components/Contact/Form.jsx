@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-import bg from "../../assets/bg.webp";
+import bg from "../../assets/formbg.webp";
 import emailjs from "emailjs-com";
 
 const Form = () => {
