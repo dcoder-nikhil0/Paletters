@@ -52,9 +52,9 @@ const HomeHero = () => {
       return;
     }
 
-    const serviceID = "service_fb0msag";
-    const templateID = "template_tt06pgc";
-    const userID = "BzeILQkfCQQ4Ezl8w";
+    const serviceID = import.meta.env.VITE_SERVICE_ID;
+    const templateID = import.meta.env.VITE_TEMPLATE_ID;
+    const userID = import.meta.env.VITE_USER_ID;
 
     const templateParams = { email };
 
