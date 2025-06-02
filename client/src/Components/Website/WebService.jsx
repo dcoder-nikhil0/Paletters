@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import design from "../../assets/design.webp";
 import dev from "../../assets/dev.webp";
 import interactive from "../../assets/interactive.webp";

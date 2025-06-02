@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import React from "react";
-import back from "../../assets/rear-view-programmer-working-all-night-long.jpg";
+import back from "../../assets/development.webp";
 import { Link } from "react-router-dom";
 
 const WebHero = () => {

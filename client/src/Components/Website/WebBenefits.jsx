@@ -1,4 +1,3 @@
-import React from "react";
 import { FaHeart, FaChartLine, FaStar, FaChartBar } from "react-icons/fa";
 
 const WebBenefits = () => {
