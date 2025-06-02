@@ -6,11 +6,11 @@ const AboutHero = () => {
   return (
     <Box
       sx={{
-        padding: { xs: "2rem 1rem", sm: "3rem 2rem", md: "4rem 4rem" },
+        padding: { xs: "2rem 1rem", sm: "3rem 2rem", md: "4rem" },
         backgroundColor: "#fff",
       }}
     >
-      <Grid container spacing={{ xs: 2, md: 4 }} alignItems="center">
+      <Grid container spacing={{ xs: 4, md: 6 }} alignItems="center">
         {/* Text Section */}
         <Grid item xs={12} md={6}>
           <Typography
@@ -28,7 +28,7 @@ const AboutHero = () => {
           <Typography
             variant="body1"
             paragraph
-            sx={{ fontSize: { xs: "0.9rem", sm: "1rem" }, color: "#333" }}
+            sx={{ fontSize: { xs: "0.95rem", sm: "1rem" }, color: "#333" }}
           >
             In the world of Graphic Design and Digital Marketing, we're not your
             typical agency. We strive to be your dedicated success partner,
@@ -38,7 +38,7 @@ const AboutHero = () => {
           <Typography
             variant="body1"
             paragraph
-            sx={{ fontSize: { xs: "0.9rem", sm: "1rem" }, color: "#333" }}
+            sx={{ fontSize: { xs: "0.95rem", sm: "1rem" }, color: "#333" }}
           >
             When you choose us, we won't just ask for a brief and budget.
             Instead, we uncover your brand's unique story and the reasons
@@ -48,7 +48,7 @@ const AboutHero = () => {
 
           <Typography
             variant="body1"
-            sx={{ fontSize: { xs: "0.9rem", sm: "1rem" }, color: "#333" }}
+            sx={{ fontSize: { xs: "0.95rem", sm: "1rem" }, color: "#333" }}
           >
             We don't stop there. We continuously monitor, adjust, and repeat the
             process to ensure your bottom line grows.
@@ -64,10 +64,12 @@ const AboutHero = () => {
             sx={{
               width: "100%",
               height: "auto",
-              borderRadius: "12px",
-              boxShadow: 3,
-              maxHeight: { xs: "250px", sm: "350px", md: "auto" },
+              maxWidth: "100%",
+              aspectRatio: { xs: "4 / 3", sm: "16 / 9", md: "auto" },
               objectFit: "cover",
+              borderRadius: 2,
+              boxShadow: 3,
+              display: "block",
             }}
           />
         </Grid>
