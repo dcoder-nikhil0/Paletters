@@ -1,4 +1,3 @@
-import React from "react";
 import { FaHandshake, FaEye, FaHandHoldingHeart } from "react-icons/fa";
 import { TiMessageTyping } from "react-icons/ti";
 

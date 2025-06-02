@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import React from "react";
-import back from "../../assets/digital-art-style-illustration-graphic-designer.jpg";
+import back from "../../assets/graphic.webp";
 import { Link } from "react-router-dom";
 
 const IllHero = () => {
