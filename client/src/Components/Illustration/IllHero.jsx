@@ -6,24 +6,25 @@ import { Link } from "react-router-dom";
 const IllHero = () => {
   return (
     <Box>
-      <div class="lg:flex">
-        <div class="flex items-center justify-center w-full px-6 py-8 lg:h-[32rem] lg:w-1/2">
-          <div class="max-w-xl">
-            <h2 class="text-3xl font-semibold text-gray-800 lg:text-4xl">
+      <div className="flex flex-col lg:flex-row">
+        {/* Left Text Section */}
+        <div className="flex items-center justify-center w-full px-6 py-12 lg:h-[32rem] lg:w-1/2">
+          <div className="max-w-xl text-center lg:text-left">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800">
               Digital Illustration Services
             </h2>
 
-            <p class="mt-4 text-sm text-gray-500 lg:text-base">
+            <p className="mt-4 text-sm sm:text-base text-gray-500">
               Bring stories and ideas to life with custom illustration designs
               that make your brand stand out. At Paletterse, we craft visuals
               that are expressive, detailed, and tailored to your unique
               message.
             </p>
 
-            <div class="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
+            <div className="flex justify-center lg:justify-start mt-6">
               <Link
                 to="/contact"
-                className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition"
+                className="inline-flex w-auto bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition"
               >
                 Get Proposal →
               </Link>
@@ -31,11 +32,12 @@ const IllHero = () => {
           </div>
         </div>
 
-        <div class="w-full h-64 lg:w-1/2 lg:h-auto">
+        {/* Right Image Section */}
+        <div className="w-full h-64 sm:h-80 md:h-96 lg:h-auto lg:w-1/2">
           <div
-            class="w-full h-full bg-cover"
+            className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: "url(" + back + ")",
+              backgroundImage: `url(${back})`,
             }}
           ></div>
         </div>

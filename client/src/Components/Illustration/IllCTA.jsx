@@ -5,43 +5,49 @@ import { Link } from "react-router-dom";
 const IllCTA = () => {
   return (
     <Box>
-      <section className="bg-white">
-        <div className="container grid grid-cols-1 gap-8 px-4 py-12 mx-auto lg:grid-cols-2">
-          <div className="flex flex-col items-center max-w-lg mx-auto text-center">
-            <h2 className="text-3xl font-semibold tracking-tight text-gray-800">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 px-4 py-10">
+        {/* Section 1: Illustration */}
+        <div className="flex flex-col justify-center items-center text-center px-4 sm:px-6">
+          <div className="max-w-md w-full">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800">
               Illustration for Website
             </h2>
 
-            <p className="mt-3 text-gray-500 ">
-              Bring Your Ideas to Life with Custom Illustrations — Get Started Today!
+            <p className="mt-4 text-sm sm:text-base text-gray-500">
+              Bring Your Ideas to Life with Custom Illustrations — Get Started
+              Today!
             </p>
 
             <Link
               to="/contact"
-              className="my-5 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-6 rounded-full shadow-lg transition"
-            >
-              Start now
-            </Link>
-          </div>
-
-          <div className="flex flex-col items-center max-w-lg mx-auto text-center">
-            <h2 className="text-3xl font-semibold tracking-tight text-gray-800">
-              Icon Design
-            </h2>
-
-            <p className="mt-3 text-gray-500 ">
-              Need Unique Icons That Match Your Brand? Let’s Design Them Together!
-            </p>
-
-            <Link
-              to="/contact"
-              className="my-6 py-3 border border-amber-400 hover:bg-yellow-500 hover:text-black text-black font-bold px-6 rounded-full shadow-lg transition"
+              className="mt-6 inline-block py-3 px-6 bg-yellow-400 hover:bg-yellow-500 text-black font-bold rounded-full shadow-lg transition"
             >
               Start now
             </Link>
           </div>
         </div>
-      </section>
+
+        {/* Section 2: Icon Design */}
+        <div className="flex flex-col justify-center items-center text-center px-4 sm:px-6">
+          <div className="max-w-md w-full">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800">
+              Icon Design
+            </h2>
+
+            <p className="mt-4 text-sm sm:text-base text-gray-500">
+              Need Unique Icons That Match Your Brand? Let’s Design Them
+              Together!
+            </p>
+
+            <Link
+              to="/contact"
+              className="mt-6 inline-block py-3 px-6 border border-yellow-400 hover:bg-yellow-500 hover:text-black text-black font-bold rounded-full shadow-lg transition"
+            >
+              Start now
+            </Link>
+          </div>
+        </div>
+      </div>
     </Box>
   );
 };
