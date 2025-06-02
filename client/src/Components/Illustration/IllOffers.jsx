@@ -63,7 +63,7 @@ const IllOffers = () => {
           </ul>
           <div className="mt-8">
             <Link
-              to="/portfolio"
+              to="https://portfolio.paletterse.com/"
               className="inline-block bg-yellow-400 font-bold text-black px-6 py-3 rounded-full hover:bg-yellow-500 transition"
             >
               Explore Portfolio

@@ -60,7 +60,7 @@ const WebOffers = () => {
             </ul>
             <div className="flex justify-start mt-8">
               <Link
-                to="/portfolio"
+                to="https://portfolio.paletterse.com/"
                 className="bg-yellow-400 font-bold text-black px-6 py-3 rounded-full hover:bg-yellow-500"
               >
                 Explore Portfolio

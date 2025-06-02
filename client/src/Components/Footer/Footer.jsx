@@ -32,6 +32,7 @@ const Footer = () => {
                     href="https://www.instagram.com/paletterse/"
                     className="mx-2 text-white transition-colors duration-300  hover:text-blue-500"
                     aria-label="Instagram"
+                    target="_blank"
                   >
                     < FaInstagramSquare />
                   </a>
@@ -40,6 +41,7 @@ const Footer = () => {
                     href="https://www.facebook.com/share/19P6ZkoeZF/"
                     className="mx-2 text-white transition-colors duration-300  hover:text-blue-500"
                     aria-label="Facebook"
+                    target="_blank"
                   >
                     <FaFacebookSquare />
                   </a>
@@ -47,7 +49,8 @@ const Footer = () => {
                   <a
                     href="https://www.linkedin.com/company/paletterse/"
                     className="mx-2 text-white transition-colors duration-300  hover:text-blue-500"
-                    aria-label="Github"
+                    aria-label="LinkedIn"
+                    target="_blank"
                   >
                     < FaLinkedin />
                   </a>
@@ -125,10 +128,10 @@ const Footer = () => {
                   +91 72095 43317
                 </a>
                 <a
-                  href="mailto:hello@paletterse.com"
+                  href="mailto:paletterse@gmail.com"
                   className="block md:inline"
                 >
-                  Info@visualbest.co
+                  paletterse@gmail.com
                 </a>
               </div>
             </div>
