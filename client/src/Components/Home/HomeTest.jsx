@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
-  Typography,
-  Avatar,
   Grid,
+  Typography,
   IconButton,
+  Avatar,
   useMediaQuery,
-  useTheme,
 } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
 const testimonials = [
@@ -70,6 +70,15 @@ const HomeTest = () => {
       prev + visibleCount >= testimonials.length ? 0 : prev + 1
     );
   };
+
+  // 🔁 Auto-scroll effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      next();
+    }, 5000); // Change every 5 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [visibleCount]);
 
   const visibleTestimonials = testimonials.slice(
     currentIndex,
@@ -198,4 +207,3 @@ const HomeTest = () => {
 };
 
 export default HomeTest;
-  
