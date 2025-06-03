@@ -28,9 +28,9 @@ const Form = () => {
       return;
     }
 
-    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const userID = import.meta.env.VITE_EMAILJS_USER_ID;
+    const serviceID = "service_8co08zm";
+    const templateID = "template_cwznewj";
+    const userID = "sSQ85uZzIdZiAtQOI";
 
     const templateParams = {
       name: name,
