@@ -9,7 +9,7 @@ const founders = [
     name: "Aditya Raj",
     title: "Founder and Managing Director",
     description: `Aditya Raj, a visionary leader, excels at visually telling brand stories 
-      that boost clients' businesses. With 20+ years in design, he's earned a reputation as 
+      that boost clients' businesses. With 5+ years in design, he's earned a reputation as 
       a visual storytelling wizard, having worked with leading Indian brands.`,
   },
   {
@@ -25,7 +25,7 @@ const founders = [
     name: "Nikhil Ranjan",
     title: "Co-Founder and CTO",
     description: `Nikhil Ranjan is a tech wizard who ensures that Paletterse's digital
-      solutions are cutting-edge. With 15+ years of experience in web development, 
+      solutions are cutting-edge. With 5+ years of experience in web development, 
       he's the backbone of the company.`,
   },
 ];
