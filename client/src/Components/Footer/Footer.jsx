@@ -135,7 +135,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="text-center md:text-right text-sm text-gray-300">
-              ©2024 - 2025 Paletterse. All Rights Reserved
+              ©2025 Paletterse. All Rights Reserved
             </div>
           </div>
         </div>
