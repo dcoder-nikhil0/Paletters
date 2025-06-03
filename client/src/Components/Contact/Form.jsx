@@ -252,7 +252,7 @@ const Form = () => {
 
                   <button
                     type="submit"
-                    className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-amber-400 rounded-md hover:bg-amber-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50"
+                    className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-yellow-400 rounded-md hover:bg-amber-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50"
                   >
                     Get in touch
                   </button>

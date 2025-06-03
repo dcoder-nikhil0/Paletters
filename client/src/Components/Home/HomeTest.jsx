@@ -13,42 +13,44 @@ import { ArrowBack, ArrowForward } from "@mui/icons-material";
 const testimonials = [
   {
     quote:
-      "“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda rerum, culpa aperiam dolorum, obcaecati corrupti aspernatur a.”.",
-    name: "Robert",
-    position: "CTO, Robert Consultency",
-    img: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80",
+      "Our website was outdated and clunky until Paletterse stepped in. They built a fast, responsive site that not only looks amazing but performs even better. We saw a 30% traffic boost within a month!",
+    name: "Sagar Verma",
+    position: "CEO, TrailGrid Logistics",
     highlight: false,
   },
   {
     quote:
-      "“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda rerum, culpa aperiam dolorum, obcaecati corrupti aspernatur a.”.",
-    name: "Jeny Doe",
-    position: "CEO, Jeny Consultency",
-    img: "https://images.unsplash.com/photo-1531590878845-12627191e687?auto=format&fit=crop&w=764&q=80",
+      "Paletterse took over our socials and turned things around in just weeks. Engagement doubled, and our brand finally has a consistent, professional vibe across platforms.",
+    name: "Neha Bansal",
+    position: "Marketing Head, StudioCraft Interiors",
     highlight: true,
   },
   {
     quote:
-      "“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda rerum, culpa aperiam dolorum, obcaecati corrupti aspernatur a.”.",
-    name: "Ema Watson",
-    position: "Marketing Manager at Stech",
-    img: "https://images.unsplash.com/photo-1488508872907-592763824245?auto=format&fit=crop&w=1470&q=80",
+      "From campaign visuals to copy, Paletterse nailed every detail. It felt like they were part of our internal team — responsive, sharp, and incredibly creative.",
+    name: "EAbhinav Raj",
+    position: "Co-founder, VoltEdge Fitness",
     highlight: false,
   },
   {
     quote:
-      "“Their design team is exceptional! Our company saw a 40% growth in engagement post the rebranding.”",
-    name: "Michael Smith",
-    position: "Creative Director, Nova Inc.",
-    img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=880&q=80",
+      "Their video work is next-level. Clean cuts, smooth transitions, and storytelling that actually connects. It gave our product a whole new edge in the market.",
+    name: "Mehul Jain",
+    position: "Product Manager, QuickCart India",
     highlight: true,
   },
   {
     quote:
-      "“Professional, punctual and creative. Highly recommended for all your design needs.”",
-    name: "Alice Brown",
-    position: "Founder, Bright Ideas",
-    img: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=880&q=80",
+      "We've worked with a lot of creative agencies, but Paletterse stands out. They care about the brand as much as we do, and that makes all the difference. Highly recommend!",
+    name: "Priya Tandon",
+    position: "Founder, Clarity & Co.",
+    highlight: false,
+  },
+  {
+    quote:
+      "Paletterse completely transformed our brand. From logo to colors, everything now speaks our story. Clients constantly compliment our fresh, modern look — all thanks to their team!",
+    name: "Ritika Shah",
+    position: "Co-founder, OliveMark Organics",
     highlight: false,
   },
 ];
@@ -115,7 +117,7 @@ const HomeTest = () => {
               sx={{
                 width: 60,
                 height: "100%",
-                bgcolor: "primary.main",
+                bgcolor: "#fcc600",
                 borderRadius: 2,
               }}
             />
@@ -123,7 +125,7 @@ const HomeTest = () => {
               sx={{
                 width: 10,
                 height: "100%",
-                bgcolor: "primary.main",
+                bgcolor: "#fcc600",
                 borderRadius: 2,
               }}
             />
@@ -131,7 +133,7 @@ const HomeTest = () => {
               sx={{
                 width: 5,
                 height: "100%",
-                bgcolor: "primary.main",
+                bgcolor: "#fcc600",
                 borderRadius: 2,
               }}
             />
@@ -157,46 +159,29 @@ const HomeTest = () => {
                 border: "1px solid",
                 borderColor: testimonial.highlight ? "transparent" : "grey.300",
                 bgcolor: testimonial.highlight
-                  ? "primary.main"
+                  ? "#fcc600"
                   : "background.default",
-                color: testimonial.highlight ? "#fff" : "text.primary",
+                color: testimonial.highlight ? "#000" : "text.primary",
                 transition: "all 0.3s ease-in-out",
               }}
             >
               <Typography
                 sx={{
                   fontSize: "1rem",
-                  color: testimonial.highlight ? "#fff" : "text.secondary",
+                  color: testimonial.highlight ? "#000" : "text.secondary",
                   lineHeight: 1.6,
                 }}
               >
                 {testimonial.quote}
               </Typography>
-
-              <Box sx={{ display: "flex", alignItems: "center", mt: 3 }}>
-                <Avatar
-                  src={testimonial.img}
-                  alt={testimonial.name}
-                  sx={{
-                    width: 56,
-                    height: 56,
-                    border: "4px solid",
-                    borderColor: testimonial.highlight
-                      ? "primary.light"
-                      : "grey.300",
-                  }}
-                />
-                <Box sx={{ ml: 2 }}>
-                  <Typography fontWeight="bold">{testimonial.name}</Typography>
-                  <Typography
-                    variant="caption"
-                    color={
-                      testimonial.highlight ? "primary.light" : "text.secondary"
-                    }
-                  >
-                    {testimonial.position}
-                  </Typography>
-                </Box>
+              <Box sx={{ m: 2 }}>
+                <Typography fontWeight="bold">{testimonial.name}</Typography>
+                <Typography
+                  variant="caption"
+                  color={testimonial.highlight ? "#333" : "text.secondary"}
+                >
+                  {testimonial.position}
+                </Typography>
               </Box>
             </Box>
           </Grid>
