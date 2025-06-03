@@ -28,8 +28,8 @@ const Form = () => {
       return;
     }
 
-    const serviceID = "service_8co08zm";
-    const templateID = "template_cwznewj";
+    const serviceID = "service_6u5uega";
+    const templateID = "template_k6xf8nk";
     const userID = "sSQ85uZzIdZiAtQOI";
 
     const templateParams = {
