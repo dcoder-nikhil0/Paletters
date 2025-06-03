@@ -2,7 +2,7 @@
 
 # Allow all bots to crawl everything
 User-agent: *
-Disallow:
+Allow: /
 
 # Sitemap location
 Sitemap: https://www.paletterse.com/sitemap.xml
