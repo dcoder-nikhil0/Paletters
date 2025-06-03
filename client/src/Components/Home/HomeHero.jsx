@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 import poster from "../../assets/1.webp";
 import post from "../../assets/2.webp";
@@ -61,12 +62,14 @@ const HomeHero = () => {
     emailjs
       .send(serviceID, templateID, templateParams, userID)
       .then((response) => {
-        console.log("Email sent successfully!", response.status, response.text);
+        // console.log("Email sent successfully!", response.status, response.text);
+        toast.success("Email Sent Successfully", response.text)
         setEmail("");
         setFormError({ email: false });
       })
       .catch((error) => {
-        console.error("Error sending email:", error);
+        // console.error("Error sending email:", error);
+        toast.error("Unable to sent Email", error)
       });
   };
 

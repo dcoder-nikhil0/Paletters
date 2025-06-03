@@ -15,12 +15,24 @@ import Design from "./Pages/Design";
 import Marketing from "./Pages/Marketing";
 import Career from "./Pages/Career";
 import Terms from "./Pages/Terms";
-import Privacy from "./Pages/Privacy"
+import Privacy from "./Pages/Privacy";
 import ScrollToTop from "./Components/ScrollToTop";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <Box>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
+
       <Router>
         <ScrollToTop />
         <Navbar />
@@ -34,10 +46,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/design" element={<Design />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/career" exact element={<Career/>} />
+          <Route path="/career" exact element={<Career />} />
           <Route path="/tnc" exact element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
-          <Route path="*" element={<NotFound/>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>

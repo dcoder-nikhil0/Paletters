@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import bg from "../../assets/formbg.webp";
 import emailjs from "emailjs-com";
+import {toast} from "react-toastify"
 
 const Form = () => {
   const [name, setName] = React.useState("");
@@ -41,16 +42,18 @@ const Form = () => {
 
     emailjs.send(serviceID, templateID, templateParams, userID).then(
       (response) => {
-        console.log("Email sent successfully!", response.status, response.text);
+        // console.log("Email sent successfully!", response.status, response.text);
+        toast.success("Form Submitted Succesfully", response.text)
         setName("");
         setEmail("");
         setPhone("");
         setMessage("");
       },
       (error) => {
-        console.error("Error sending email:", error);
+        // console.error("Error sending email:", error);
+        toast.error("Unable to submit form", error)
       }
-    );
+    , 1000);
   };
 
   return (
