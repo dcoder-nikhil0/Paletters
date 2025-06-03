@@ -32,13 +32,15 @@ const IllHero = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="w-full h-64 sm:h-80 md:h-96 lg:h-auto lg:w-1/2">
-          <div
-            className="w-full h-full bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${back})`,
-            }}
-          ></div>
+        <div className="w-full h-64 sm:h-80 md:h-96 lg:h-auto lg:w-1/2 flex items-center justify-center">
+          <img
+            src={back}
+            alt="Team working on digital illustrations"
+            className="object-cover w-full h-full"
+            loading="eager" // Important: do NOT lazy-load LCP image
+            width="600"
+            height="500"
+          />
         </div>
       </div>
     </Box>
